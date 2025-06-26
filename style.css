@@ -1,8 +1,505 @@
 @import url("https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
-.albert-sans-<uniquifier > {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
   font-family: "Albert Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
+  background-color: #000000;
+  color: #ffffff;
+  background-image: url(res/desktop.jpg);
+  background-size: cover;
+  background-position: center;
+  max-height: 100vh;
+  background-attachment: fixed;
+}
+
+.heading1 {
+  font-family: "Albert Sans";
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: none;
+  text-decoration: none;
+  font-size: 64px;
+  letter-spacing: -0.04em;
+  line-height: 90%;
+  flex-shrink: 0;
+}
+
+.heading2 {
+  font-family: "Albert Sans";
+  font-weight: 700;
+  color: #ffb700;
+  text-transform: capitalize;
+  text-decoration: none;
+  font-size: 48px;
+  letter-spacing: -0.02em;
+  line-height: 100%;
+  flex-shrink: 0;
+}
+
+.heading3 {
+  font-family: "Albert Sans";
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 26px;
+  letter-spacing: -0.02em;
+  line-height: 130%;
+  flex-shrink: 0;
+}
+
+.bodyL {
+  font-family: "Albert Sans";
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: none;
+  text-decoration: none;
+  font-size: 18px;
+  letter-spacing: 0em;
+  line-height: 170%;
+}
+
+.body {
+  font-family: "Albert Sans";
+  font-weight: 400;
+  color: #ffffff;
+  text-transform: none;
+  text-decoration: none;
+  font-size: 16px;
+  letter-spacing: 0em;
+  line-height: 170%;
+}
+
+.bodyS {
+  font-family: "Albert Sans";
+  font-weight: regular;
+  color: #ffffff;
+  text-transform: none;
+  text-decoration: none;
+  font-size: 16px;
+  letter-spacing: 0em;
+  line-height: 170%;
+}
+
+.quote {
+  font-family: "Albert Sans";
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: none;
+  text-decoration: none;
+  font-size: 32px;
+  letter-spacing: -0.02em;
+  line-height: 130%;
+}
+
+.main-container {
+  position: relative;
+  width: 80%;
+  max-width: 1600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  padding: 0px;
+  margin: 0 auto;
+  overflow: visible;
+  border: 1px solid gray;
+  z-index: 3;
+}
+
+.home {
+  border: 1px solid #ffffff;
+  position: relative;
+  width: 1fr;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: nowrap;
+  padding: 0px;
+}
+
+.opentowork {
+  position: absolute;
+  top: 40px;
+  left: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 11px;
+  padding: 0px;
+}
+
+.opentowork img {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.name {
+  position: absolute;
+  left: 0;
+  top: 44%;
+  transform: translateY(-50%);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  gap: 16px;
+  padding: 0px;
+  overflow: hidden;
+  padding: 0;
+}
+
+.name h3 {
+  color: #ffb800;
+  outline: none;
+  flex-shrink: 0;
+  word-break: break-word;
+  word-wrap: break-word;
+}
+
+.links-home {
+  position: absolute;
+  left: 0px;
+  top: 68%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  gap: 40px;
+  padding: 0px;
+  overflow: hidden;
+}
+
+.links-home img {
+  position: relative;
+  width: 26px;
+  height: 26px;
+}
+
+.link1 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  gap: 20px;
+  overflow: hidden;
+  padding: 0px;
+}
+
+.mail {
+  position: relative;
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  gap: 10px;
+  overflow: hidden;
+  padding: 0px;
+}
+
+.linkdin {
+  position: relative;
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  gap: 10px;
+  overflow: hidden;
+  padding: 0px;
+}
+
+.link2 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  gap: 20px;
+  overflow: hidden;
+  padding: 0px;
+}
+
+.number {
+  position: relative;
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  gap: 10px;
+  overflow: hidden;
+  padding: 0px;
+}
+
+.add {
+  position: relative;
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  gap: 10px;
+  overflow: hidden;
+  padding: 0px;
+}
+
+.menu {
+  width: 720px;
+  height: 56px;
+  border-radius: 999px;
+  position: fixed;
+  bottom: 48px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: hsla(0, 0%, 100%, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding: 4px;
+  overflow: hidden;
+  z-index: 5;
+  font-family: "Albert Sans";
+  font-weight: semi-bold;
+  font-size: 16px;
+  text-transform: none;
+  text-decoration: none;
+  text-align: center;
+  letter-spacing: 0em;
+  line-height: normal;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-btn {
+  height: 48px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
+  background-color: transparent;
+  color: #ffffff;
+  border-radius: 999px;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.menu-btn-selected {
+  height: 48px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
+  background-color: white;
+  color: #000000;
+  border-radius: 999px;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.summary {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  gap: 0px;
+  overflow: hidden;
+  padding: 80px 0;
+}
+
+.summary-ct {
+  position: relative;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  gap: 32px;
+  overflow: visible;
+  padding: 0;
+}
+
+.summary-ct h2 {
+  width: 100%;
+  outline: none;
+  transform: none;
+  position: relative;
+  white-space: pre-wrap;
+  word-break: break-word;
+  word-wrap: break-word;
+}
+
+.summary-ct p {
+  width: 100%;
+  outline: none;
+  transform: none;
+  position: relative;
+  white-space: pre-wrap;
+  word-break: break-word;
+  word-wrap: break-word;
+}
+
+.dark-summary {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  gap: 32px;
+  height: min-content;
+  overflow: hidden;
+  padding: 24px 0 0;
+}
+
+.dark-summary img {
+  position: relative;
+  width: 2px;
+  align-self: stretch;
+  height: auto;
+  overflow: hidden;
+}
+
+.projects {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  gap: 0px;
+  overflow: hidden;
+  padding: 80px 0;
+}
+
+.projects-ct {
+  position: relative;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  gap: 40px;
+  overflow: hidden;
+  padding: 0px;
+}
+
+.projects-ct h2 {
+  width: 100%;
+  outline: none;
+  transform: none;
+  position: relative;
+  white-space: pre-wrap;
+  word-break: break-word;
+  word-wrap: break-word;
+}
+
+.project-stack {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 0px;
+  overflow: hidden;
+  padding: 0px;
+  border: #000000 1px solid;
+}
+
+#stack1 {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  gap: 16px;
+  overflow: visible;
+  padding: 0px;
+}
+
+.line {
+  position: relative;
+  width: 9px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-self: stretch;
+  flex-wrap: nowrap;
+  gap: 0px;
+  height: auto;
+  overflow: hidden;
+  padding: 0;
+}
+
+.gap {
+  position: relative;
+  height: 14px;
+  width: 1px;
+}
+
+.yellow-circle {
+  position: relative;
+  width: 100%;
+  height: 9px;
+  border-radius: 50%;
+}
+
+.light-line {
+  position: relative;
+  width: 1px;
+  flex: 1 0 0px;
+  height: 1px;
+  opacity: 0.5;
+}
+
+.content {
+  position: relative;
+  width: 1px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1 0 0px;
+  flex-wrap: nowrap;
+  gap: 40px;
+  padding: 0 0 80px;
+}
+
+#content1-heading {
 }
