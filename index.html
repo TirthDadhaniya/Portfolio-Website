@@ -11,168 +11,183 @@
 <body>
 
     <div class="menu">
-        <button class="home-btn" onclick="location.href='index.html'">Home</button>
-        <button class="summary-btn" onclick="location.href='index.html'">Summary</button>
-        <button class="projects-btn" onclick="location.href='projects.html'">Projects</button>
-        <button class="skills-btn" onclick="location.href='skills.html'">Skills</button>
-        <button class="contact-btn" onclick="location.href='contact.html'">Links</button>
+        <button class="menu-btn" id="home-btn" data-target="home">Home</button>
+        <button class="menu-btn" id="summary-btn" data-target="summary">Summary</button>
+        <button class="menu-btn" id="projects-btn" data-target="projects" l'">Projects</button>
+        <button class="menu-btn" id="skills-btn" data-target="skills"">Skills</button>
+        <button class=" menu-btn" id="contact-btn" data-target="links"'">Links</button>
     </div>
 
-    <div class="home">
-        <div class="home-ct">
+    <div class="main-container">
+        <div class="home">
             <div class="opentowork">
-                <img>
+                <img src="res/greendot.png">
                 <h4 class="bodyL">Open to Work</h4>
             </div>
             <div class="name">
+                <h3 class="heading3">Web Developer</h3>
                 <h1 class="heading1">Tirth Dadhaniya</h1>
             </div>
-            <div class="links">
+            <div class="links-home">
                 <div class="link1">
-                    <h4 class="bodyL" id="mail">work.tirthdadhaniya@gmail.com</h4>
-                    <h4 class="bodyL" id="linkdin">https://www.linkedin.com/in/tirthdadhaniya/</h4>
+                    <div class="mail">
+                        <img src="res/mail.svg">
+                        <h4 class="bodyL" id="mail">work.tirthdadhaniya@gmail.com</h4>
+                    </div>
+                    <div class="linkdin">
+                        <img src="res/linkdin.svg">
+                        <h4 class="bodyL" id="linkdin">
+                            <a href="https://www.linkedin.com/in/tirthdadhaniya/" target="_blank"
+                                style="color: inherit; text-decoration: none;">
+                                linkedin.com/in/tirthdadhaniya
+                            </a>
+                        </h4>
+                    </div>
                 </div>
                 <div class="link2">
-                    <h4 class="bodyL" id="number">+91 8734823589</h4>
-                    <h4 class="bodyL" id="home">Ahmedabad, Gujarat, IN</h4>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <div class="summary">
-        <div class="summary-ct">
-            <h2 class="heading2">Summary</h2>
-            <p id="light-summary" class="body">As an Information Technology student at Gujarat Technological University,
-                I am passionate about developing practical solutions through programming. My expertise includes Core
-                Java, HTML, CSS, and JavaScript. I aim to bridge the gap between theory and practice. I have contributed
-                to several innovative projects, including a Netflix homepage clone, a To-do list web app, an online
-                bookstore prototype, and a skill-learning platform, all of which highlight my ability to work
-                collaboratively and deliver results. My goal is to leverage my skills to create impactful software
-                solutions while continuing to expand my expertise through hands-on experience in the tech industry.</p>
-            <div class="dark-summary">
-                <p class="quote">Motivated by a strong desire to learn and grow, I am constantly exploring new
-                    technologies and techniques to improve my skills and deliver impactful solutions. Whether developing
-                    web applications, working on system design, or optimizing software performance, I am dedicated to
-                    producing high-quality work that meets the needs of both users and businesses."</p>
-            </div>
-        </div>
-    </div>
-
-
-    <div class="projects">
-        <div class="projects-ct">
-            <h2 class="heading2">Projects</h2>
-            <div class="project-stack">
-                <div id="stack1">
-                    <div id="line"></div>
-                    <div id="content1">
-                        <div id="content1-heading">
-                            <h3 class="heading3">NETFLIX LANDING PAGE</h3>
-                        </div>
-                        <p class="body"></p>
-                        <div class="project-card"></div>"
+                    <div class="number">
+                        <img src="res/phone.svg">
+                        <h4 class="bodyL" id="number">+91 8734823589</h4>
                     </div>
-                </div>
-
-                <div id="stack1">
-                    <div id="line"></div>
-                    <div id="content1">
-                        <div id="content1-heading">
-                            <h3 class="heading3">NETFLIX LANDING PAGE</h3>
-                        </div>
-                        <p class="body"></p>
-                        <div class="project-card"></div>"
-                    </div>
-                </div>
-
-                <div id="stack1">
-                    <div id="line"></div>
-                    <div id="content1">
-                        <div id="content1-heading">
-                            <h3 class="heading3">NETFLIX LANDING PAGE</h3>
-                        </div>
-                        <p class="body"></p>
-                        <div class="project-card"></div>"
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-
-    <div class="skills">
-        <div class="skills-ct">
-            <h2 class="heading2">Skills & Tools</h2>
-            <div class="skills-stack">
-                <div class="skills-text">
-                    <ul>
-                        <li class="bodyL">Core Java</li>
-                        <li class="bodyL">HTML</li>
-                        <li class="bodyL">CSS</li>
-                        <li class="bodyL">JavaScript</li>
-                        <li class="bodyL">React.js</li>
-                        <li class="bodyL">Node.js</li>
-                        <li class="bodyL">Express.js</li>
-                        <li class="bodyL">MongoDB</li>
-                        <li class="bodyL">Git & GitHub</li>
-                    </ul>
-                </div>
-                <div class="skills-logo">
-                    <div class="skills-logo-stack">
-                        <img>
-                        <h6 class="logo-label"></h6>
-                    </div>
-                </div>
-                <div class="language">
-                    <h3 class="heading3">Language</h3>
-                    <div class="language-stack">
-                        <div class="language-stack1">
-                            <h4 class="bodyL">Gujarati</h4>
-                            <!--LANGUAGE BAR -->
-                        </div>
-                        <div class="language-stack2">
-                            <h4 class="bodyL">English</h4>
-                            <!--LANGUAGE BAR -->
-                        </div>
-                        <div class="language-stack3">
-                            <h4 class="bodyL">Hindi</h4>
-                            <!--LANGUAGE BAR -->
-                        </div>
-                    </div>
-                </div>
-                <div class="education">
-                    <h3 class="heading3">EDUCATION & CERTIFICATES</h3>
-                    <div class="education-stack">
-                        <div class="education-stack1">
-                            <h4 class="bodyL">Gujarat Technological University</h4>
-                            <p class="body">Bachelor of Technology in Information Technology</p>
-                            <p class="body">2022 - 2026</p>
-                        </div>
-                        <div class="education-stack2">
-                            <h4 class="bodyL">Shree Swaminarayan Gurukul International School</h4>
-                            <p class="body">Higher Secondary Education</p>
-                            <p class="body">2019 - 2022</p>
-                        </div>
+                    <div class="add">
+                        <img src="res/location.svg">
+                        <h4 class="bodyL" id="home">Ahmedabad, Gujarat, IN</h4>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="links">
-        <div class="links-ct">
-            <h2 id="heading2">Links</h2>
-            <div class="links-logo">
-                <img>
-                <img>
-                <img>
+
+        <div class="summary" id="summary">
+            <div class="summary-ct">
+                <h2 class="heading2">Summary</h2>
+                <p id="light-summary" class="body">As an Information Technology student at Gujarat Technological University, I am passionate about developing practical solutions through programming. My expertise includes Core Java, HTML, CSS, and JavaScript. I aim to bridge the gap between theory and practice. I have contributed to several innovative projects, including a Netflix homepage clone, a To-do list web app, an online bookstore prototype, and a skill-learning platform, all of which highlight my ability to work collaboratively and deliver results. My goal is to leverage my skills to create impactful software solutions while continuing to expand my expertise through hands-on experience in the tech industry.
+                </p>
+                <div class="dark-summary">
+                    <img src="res/line.png">
+                    <p class="quote">Motivated by a strong desire to learn and grow, I am constantly exploring new technologies and techniques to improve my skills and deliver impactful solutions. Whether developing web applications, working on system design, or optimizing software performance, I am dedicated to producing high-quality work that meets the needs of both users and businesses."</p>
+                </div>
             </div>
-            <div class="links-link">
-                <h4 class="bodyL">Email</h4>
-                <h4 class="bodyL">Number</h4>
+        </div>
+
+
+        <div class="projects" id="projects">
+            <div class="projects-ct">
+                <h2 class="heading2">Projects</h2>
+                <div class="project-stack">
+                    <div id="stack1">
+                        <div class="line">
+                            <div class="gap"></div>
+                            <img class=yellow-circle" src="res/yello-circle.png">
+                            <div class="light-line"></div>
+                        </div>
+                        <div class="content">
+                            <div id="content1-heading">
+                                <h3 class="heading3">NETFLIX LANDING PAGE</h3>
+                            </div>
+                            <p class="body"></p>
+                            <div class="project-card"></div>
+                        </div>
+                    </div>
+
+                    <div id="stack1">
+                        <div id="line"></div>
+                        <div class="content1">
+                            <div id="content1-heading">
+                                <h3 class="heading3">NETFLIX LANDING PAGE</h3>
+                            </div>
+                            <p class="body"></p>
+                            <div class="project-card"></div>
+                        </div>
+                    </div>
+
+                    <div id="stack1">
+                        <div id="line"></div>
+                        <div id="content1">
+                            <div id="content1-heading">
+                                <h3 class="heading3">NETFLIX LANDING PAGE</h3>
+                            </div>
+                            <p class="body"></p>
+                            <div class="project-card"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="skills" id="skills">
+            <div class="skills-ct">
+                <h2 class="heading2">Skills & Tools</h2>
+                <div class="skills-stack">
+                    <div class="skills-text">
+                        <ul>
+                            <li class="bodyL">Core Java</li>
+                            <li class="bodyL">HTML</li>
+                            <li class="bodyL">CSS</li>
+                            <li class="bodyL">JavaScript</li>
+                            <li class="bodyL">React.js</li>
+                            <li class="bodyL">Node.js</li>
+                            <li class="bodyL">Express.js</li>
+                            <li class="bodyL">MongoDB</li>
+                            <li class="bodyL">Git & GitHub</li>
+                        </ul>
+                    </div>
+                    <div class="skills-logo">
+                        <div class="skills-logo-stack">
+                            <img>
+                            <h6 class="logo-label"></h6>
+                        </div>
+                    </div>
+                    <div class="language">
+                        <h3 class="heading3">Language</h3>
+                        <div class="language-stack">
+                            <div class="language-stack1">
+                                <h4 class="bodyL">Gujarati</h4>
+                                <!--LANGUAGE BAR -->
+                            </div>
+                            <div class="language-stack2">
+                                <h4 class="bodyL">English</h4>
+                                <!--LANGUAGE BAR -->
+                            </div>
+                            <div class="language-stack3">
+                                <h4 class="bodyL">Hindi</h4>
+                                <!--LANGUAGE BAR -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="education">
+                        <h3 class="heading3">EDUCATION & CERTIFICATES</h3>
+                        <div class="education-stack">
+                            <div class="education-stack1">
+                                <h4 class="bodyL">Gujarat Technological University</h4>
+                                <p class="body">Bachelor of Technology in Information Technology</p>
+                                <p class="body">2022 - 2026</p>
+                            </div>
+                            <div class="education-stack2">
+                                <h4 class="bodyL">Shree Swaminarayan Gurukul International School</h4>
+                                <p class="body">Higher Secondary Education</p>
+                                <p class="body">2019 - 2022</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="links" id="links">
+            <div class="links-ct">
+                <h2 class="heading2">Links</h2>
+                <div class="links-logo">
+                    <img>
+                    <img>
+                    <img>
+                </div>
+                <div class="links-link">
+                    <h4 class="bodyL">Email</h4>
+                    <h4 class="bodyL">Number</h4>
+                </div>
             </div>
         </div>
     </div>
@@ -188,6 +203,8 @@
     backend. Users can create, read, update, and delete tasks, manage task priorities, and mark tasks as
     completed.
     This app also features color-coded priority indicators and a responsive design. -->
+
+    <script src="script.js"></script>
 
 </body>
 
@@ -208,15 +225,14 @@
                     </div>
                     <p>As a Full Stack Developer at CreTech, I have created four web applications utilizing React,
                         Node.js, Express,MongoDB, and other technologies. Below are brief descriptions of the key
-                        projects I've developed.
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="stack2"></div>
-        <div class="stack3"></div>
+                        projects I' ve developed. </p>
+    </div>
+    </div>
+    </div>
+    <div class="stack2"></div>
+    <div class="stack3"></div>
     </div> -->
 
-<!-- <p id="light-work">I am currently seeking internship opportunities to apply my skills in a real-world setting. I am
+    <!-- <p id="light-work">I am currently seeking internship opportunities to apply my skills in a real-world setting. I am
         eager to contribute to innovative projects and collaborate with experienced professionals in the tech industry.
     </p> -->
