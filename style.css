@@ -484,8 +484,6 @@ body {
   position: relative;
   width: 1px;
   flex: 1 0 0px;
-  height: 1px;
-  opacity: 0.5;
 }
 
 .content {
@@ -494,12 +492,25 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   flex: 1 0 0px;
   flex-wrap: nowrap;
   gap: 40px;
   padding: 0 0 80px;
 }
 
-#content1-heading {
+.content1-heading {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 0;
+}
+
+.content1-heading h3 {
+  height: auto;
+  outline: none;
+  transform: none;
+  white-space: pre-wrap;
+  word-break: break-word;
+  word-wrap: break-word;
 }
