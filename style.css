@@ -428,18 +428,18 @@ body {
 .project-stack {
   position: relative;
   width: 100%;
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-  gap: 0px;
+  gap: 0px; */
   overflow: hidden;
   padding: 0px;
   border: #000000 1px solid;
 }
 
-#stack1 {
+.stack {
   position: relative;
   width: 100%;
   display: flex;
@@ -469,15 +469,15 @@ body {
 
 .gap {
   position: relative;
-  height: 14px;
+  height: 7px;
   width: 1px;
 }
 
 .yellow-circle {
   position: relative;
-  width: 100%;
+  width: 1fr;
   height: 9px;
-  border-radius: 50%;
+  border-radius: 9999px;
 }
 
 .light-line {
@@ -488,29 +488,240 @@ body {
 
 .content {
   position: relative;
-  width: 1px;
+  width: 1fr;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   flex: 1 0 0px;
   flex-wrap: nowrap;
-  gap: 40px;
+  gap: 30px;
   padding: 0 0 80px;
 }
 
-.content1-heading {
+.content-heading {
   position: relative;
-  width: 100%;
+  width: 1fr;
   overflow: hidden;
   padding: 0;
 }
 
-.content1-heading h3 {
+.content-heading h3 {
+  outline: none;
+  transform: none;
+  white-space: pre-wrap;
+  word-break: break-word;
+  word-wrap: break-word;
+}
+
+.content-desc {
+  position: relative;
+  width: 1fr;
   height: auto;
   outline: none;
   transform: none;
   white-space: pre-wrap;
   word-break: break-word;
   word-wrap: break-word;
+}
+
+.skills {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  gap: 0px;
+  overflow: visible;
+  padding: 80px 0;
+  border: 1px solid #ffffff;
+}
+
+.skills-ct {
+  position: relative;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  gap: 32px;
+  overflow: visible;
+  padding: 0px;
+  border: 1px solid #ffffff;
+}
+
+.skills-ct h2 {
+  position: relative;
+  width: 100%;
+  outline: none;
+  opacity: 1;
+  transform: none;
+  height: auto;
+  white-space: pre-wrap;
+  word-break: break-word;
+  word-wrap: break-word;
+  border: 1px solid #ffffff;
+}
+
+.skills-stack {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  gap: 104px;
+  overflow: visible;
+  padding: 0px;
+  border: 1px solid #ffffff;
+}
+
+.skills-text {
+  position: relative;
+  width: auto;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(50px, 1fr));
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  grid-auto-rows: minmax(0, 1fr);
+  justify-content: center;
+  gap: 8px;
+  overflow: hidden;
+  padding: 0;
+  border: 1px solid #ffffff;
+}
+
+.skills-text-div {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  justify-self: start;
+  align-items: center;
+  align-self: start;
+  flex-wrap: nowrap;
+  gap: 16px;
+  overflow: hidden;
+  padding: 0;
+}
+
+.skills-text-div img {
+  position: relative;
+  height: 9px;
+  width: 9px;
+  border-radius: 9999px;
+}
+
+.skills-logo {
+  position: relative;
+  height: 260px;
+  width: 655px;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(50px, 1fr));
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  grid-auto-rows: minmax(0, 1fr);
+  justify-content: center;
+  gap: 0px;
+  overflow: visible;
+  padding: 0px;
+}
+
+.skills-logo-stack {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-self: start;
+  align-items: flex-start;
+  align-self: start;
+  flex-wrap: nowrap;
+  gap: 8px;
+  overflow: visible;
+  padding: 0px;
+  margin: 10px 0px;
+}
+
+.logo-stack-inside {
+  height: 100px;
+  width: 64px;
+  position: relative;
+  overflow: visible;
+}
+
+.logo-img {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  aspect-ratio: 1 / 1;
+  height: var(--framer-aspect-ratio-supported, 64px);
+  overflow: visible;
+}
+
+.skill-icon {
+  position: absolute;
+  border-radius: inherit;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-position: center;
+  object-fit: cover;
+}
+
+.logo-label {
+  position: absolute;
+  outline: none;
+  display: flex;
+  height: auto;
+  width: auto;
+  bottom: 1px;
+  left: 50%;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  transform: translate(-50%);
+  white-space: pre;
+  font-family: Albert sans;
+  font-weight: Semibold;
+  text-transform: none;
+  text-decoration: none;
+  text-align: center;
+  font-size: 14px;
+  line-height: 100%;
+}
+
+.language {
+  border: 1px solid #ffffff;
+}
+
+.language-stack {
+  border: 1px solid #ffffff;
+}
+
+.language-stack1 {
+  border: 1px solid #ffffff;
+}
+
+.education {
+  border: 1px solid #ffffff;
+}
+
+.education-stack {
+  border: 1px solid #ffffff;
+}
+
+.education-stack1 {
+  border: 1px solid #ffffff;
 }
