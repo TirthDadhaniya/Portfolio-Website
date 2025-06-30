@@ -8,16 +8,32 @@
   </head>
 
   <body>
+    <div class="background-blur-overlay"></div>
     <div class="menu">
-      <button class="menu-btn" id="home-btn" data-target="home">Home</button>
-      <button class="menu-btn" id="summary-btn" data-target="summary">Summary</button>
-      <button class="menu-btn" id="projects-btn" data-target="projects">Projects</button>
-      <button class="menu-btn" id="skills-btn" data-target="skills">Skills</button>
-      <button class="menu-btn" id="contact-btn" data-target="links">Links</button>
+      <div class="menu-button-solo">
+        <img src="res/home-w.svg" />
+        <button class="menu-btn" id="home-btn" data-target="home">Home</button>
+      </div>
+      <div class="menu-button-solo">
+        <img src="res/summery-w.svg" />
+        <button class="menu-btn" id="summary-btn" data-target="summary">Summary</button>
+      </div>
+      <div class="menu-button-solo">
+        <img src="res/projects-w.svg" />
+        <button class="menu-btn" id="projects-btn" data-target="projects">Projects</button>
+      </div>
+      <div class="menu-button-solo">
+        <img src="res/skills-w.svg" />
+        <button class="menu-btn" id="skills-btn" data-target="skills">Skills</button>
+      </div>
+      <div class="menu-button-solo">
+        <img src="res/links-w.svg" />
+        <button class="menu-btn" id="contact-btn" data-target="links">Links</button>
+      </div>
     </div>
 
     <div class="main-container">
-      <div class="home">
+      <div class="home" id="home">
         <div class="opentowork">
           <div class="greendot"></div>
           <h4 class="bodyL">Open to Work</h4>
