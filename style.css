@@ -112,7 +112,6 @@ body {
 }
 
 .home {
-  border: 1px solid #ffffff;
   position: relative;
   width: 1fr;
   height: 100vh;
@@ -610,8 +609,8 @@ body {
 
 .skills-logo {
   position: relative;
-  width: 655px;
-  height: 390px;
+  width: 650px;
+  height: auto;
   display: grid;
   grid-template-columns: repeat(5, minmax(50px, 1fr));
   grid-template-rows: repeat(2, minmax(0, 1fr));
@@ -626,7 +625,7 @@ body {
   justify-content: center;
   align-items: flex-start;
   flex-wrap: nowrap;
-  padding: 0px;
+  padding: 20px 0px;
   overflow: hidden;
 }
 
@@ -635,9 +634,9 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: nowrap;
-  gap: 20px;
+  gap: 8px;
   padding: 0px;
   width: auto;
   height: auto;
@@ -648,60 +647,260 @@ body {
 }
 
 .skill-icon {
-  width: 80px;
-  height: 80px;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: flex-start;
+}
+
+#html {
+  width: 75px;
+  height: 75px;
+}
+
+#css {
+  width: 75px;
+  height: 75px;
+}
+
+#js {
+  width: 75px;
+  height: 75px;
+}
+
+#mongodb {
+  gap: 13px;
+}
+
+#mongodb-icon {
+  width: 65px;
+  height: 65px;
 }
 
 .skill-icon img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 70px;
-  height: 70px;
-  object-position: center;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
 }
 
 .logo-label {
-  position: absolute;
-  bottom: 0;
-  white-space: nowrap;
-  overflow: visible;
-
-  font-family: Albert Sans;
   font-size: 14px;
   font-weight: 700;
-  color: white;
-  transform: none;
-  line-height: 100%;
-  text-decoration: none;
-  outline: none;
+  color: #ffffff;
 }
 
 .language {
-  border: 1px solid #ffffff;
+  position: relative;
+  width: 480px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  gap: 24px;
+  padding: 0px;
+  overflow: hidden;
+}
+
+.language h3 {
+  color: #FFB800;
 }
 
 .language-stack {
-  border: 1px solid #ffffff;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 0px;
+  flex-wrap: nowrap;
 }
 
-.language-stack1 {
-  border: 1px solid #ffffff;
+.language-stack-inside {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding: 0px;
+  overflow: hidden;
+}
+
+.language-stack-inside h4 {
+  position: relative;
+  width: 87px;
 }
 
 .education {
-  border: 1px solid #ffffff;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  gap: 32px;
+  padding: 0px;
+  overflow: hidden;
+}
+
+.education h3 {
+  color: #FFB800;
 }
 
 .education-stack {
-  border: 1px solid #ffffff;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  gap: 24px;
+  padding: 0px;
+  overflow: hidden;
 }
 
-.education-stack1 {
-  border: 1px solid #ffffff;
+.education-stack-solo {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  gap: 16px;
+  padding: 0px;
+  overflow: hidden;
 }
+
+.education-stack-inside1 {
+  position: relative;
+  width: 9px;
+  height: 1fr;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 0px;
+  padding: 0px;
+  overflow: hidden;
+}
+
+.upper-gap {
+  position: relative;
+  width: 1px;
+  height: 9px;
+}
+
+.education-stack-inside1 img {
+  position: relative;
+  width: 1fr;
+  height: 9px;
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.education-stack-inside2 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  gap: 0px;
+  padding: 0px;
+  overflow: hidden;
+}
+
+.education-stack-inside2 p {
+  color: #FFB800;
+}
+
+.certificate {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  gap: 32px;
+  padding: 0px;
+  overflow: hidden;
+}
+
+.certificate h3 {
+  color: #FFB800;
+}
+
+.certificate-stack {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  gap: 24px;
+  padding: 0px;
+  overflow: hidden;
+}
+
+.certificate-stack-solo {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  gap: 16px;
+  padding: 0px;
+  overflow: hidden;
+}
+
+.certificate-stack-inside1 {
+  position: relative;
+  width: 9px;
+  height: 1fr;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 0px;
+  padding: 0px;
+  overflow: hidden;
+}
+
+.upper-gap {
+  position: relative;
+  width: 1px;
+  height: 9px;
+}
+
+.certificate-stack-inside1 img {
+  position: relative;
+  width: 1fr;
+  height: 9px;
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.certificate-stack-inside2 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  gap: 0px;
+  padding: 0px;
+  overflow: hidden;
+}
+
+.certificate-stack-inside2 p {
+  color: #FFB800;
+}
+
 
 .links {
   position: relative;
@@ -801,4 +1000,13 @@ body {
   position: relative;
   width: 26px;
   height: 26px;
+}
+
+.footer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10px;
 }
