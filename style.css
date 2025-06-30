@@ -106,14 +106,14 @@ body {
   justify-content: flex-start;
   flex-wrap: nowrap;
   padding: 0px;
-  margin: 0 auto;
   overflow: visible;
   z-index: 3;
+  margin: 0px auto;
 }
 
 .home {
   position: relative;
-  width: 1fr;
+  width: 100%;
   height: 100vh;
   display: flex;
   flex-direction: row;
@@ -121,20 +121,30 @@ body {
   align-content: center;
   flex-wrap: nowrap;
   padding: 0px;
+  overflow: visible;
 }
 
 .opentowork {
   position: absolute;
-  top: 40px;
   left: 0px;
+  top: 5%;
+  transform: translateY(-50%);
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  align-content: center;
   align-items: center;
   flex-wrap: nowrap;
   gap: 11px;
   padding: 0px;
+  overflow: visible;
+}
+
+.greendot {
+  position: relative;
+  height: 9px;
+  width: 9px;
+  background-color: #02FF27;
+  border-radius: 50%;
 }
 
 .opentowork img {
@@ -153,13 +163,11 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-content: flex-start;
   align-items: flex-start;
   flex-wrap: nowrap;
   gap: 16px;
   padding: 0px;
   overflow: hidden;
-  padding: 0;
 }
 
 .name h3 {
@@ -178,7 +186,6 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  align-content: flex-start;
   align-items: flex-start;
   flex-wrap: nowrap;
   gap: 40px;
@@ -192,70 +199,19 @@ body {
   height: 26px;
 }
 
-.link1 {
+.link-clm {
   position: relative;
   display: flex;
-  justify-content: center;
   flex-direction: column;
+  justify-content: center;
   align-items: flex-start;
   flex-wrap: nowrap;
   gap: 20px;
-  overflow: hidden;
   padding: 0px;
+  overflow: hidden;
 }
 
-.mail {
-  position: relative;
-  display: flex;
-  flex-shrink: 0;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  flex-wrap: nowrap;
-  gap: 10px;
-  overflow: hidden;
-  padding: 0px;
-}
-
-.linkdin {
-  position: relative;
-  display: flex;
-  flex-shrink: 0;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  flex-wrap: nowrap;
-  gap: 10px;
-  overflow: hidden;
-  padding: 0px;
-}
-
-.link2 {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: flex-start;
-  flex-wrap: nowrap;
-  gap: 20px;
-  overflow: hidden;
-  padding: 0px;
-}
-
-.number {
-  position: relative;
-  display: flex;
-  flex-shrink: 0;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  flex-wrap: nowrap;
-  gap: 10px;
-  overflow: hidden;
-  padding: 0px;
-}
-
-.add {
+.link-element {
   position: relative;
   display: flex;
   flex-shrink: 0;
@@ -269,31 +225,22 @@ body {
 }
 
 .menu {
-  width: 720px;
-  height: 56px;
-  border-radius: 999px;
   position: fixed;
   bottom: 48px;
   left: 50%;
   transform: translateX(-50%);
+  width: 720px;
   background-color: hsla(0, 0%, 100%, 0.1);
+  border-radius: 999px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: nowrap;
   padding: 4px;
   overflow: hidden;
-  z-index: 5;
-  font-family: "Albert Sans";
-  font-weight: semi-bold;
-  font-size: 16px;
-  text-transform: none;
-  text-decoration: none;
-  text-align: center;
-  letter-spacing: 0em;
-  line-height: normal;
   border: none;
   cursor: pointer;
+  z-index: 5;
 }
 
 .menu-btn {
@@ -302,9 +249,17 @@ body {
   flex-shrink: 1;
   flex-basis: 0;
   background-color: transparent;
-  color: #ffffff;
+  border: none;
   border-radius: 999px;
-  border: 1px solid black;
+  font-family: "Albert Sans";
+  color: #ffffff;
+  font-weight: semi-bold;
+  font-size: 16px;
+  text-transform: none;
+  text-decoration: none;
+  text-align: center;
+  letter-spacing: 0em;
+  line-height: normal;
   cursor: pointer;
 }
 
@@ -314,9 +269,8 @@ body {
   flex-shrink: 1;
   flex-basis: 0;
   background-color: white;
-  color: #000000;
   border-radius: 999px;
-  border: 1px solid black;
+  color: #000000;
   cursor: pointer;
 }
 
@@ -329,8 +283,8 @@ body {
   align-items: flex-start;
   flex-wrap: nowrap;
   gap: 0px;
-  overflow: hidden;
   padding: 80px 0;
+  overflow: hidden;
 }
 
 .summary-ct {
@@ -342,25 +296,17 @@ body {
   align-items: flex-start;
   flex-wrap: nowrap;
   gap: 32px;
+  padding: 0px;
   overflow: visible;
-  padding: 0;
 }
 
-.summary-ct h2 {
+.light-summary {
+  position: relative;
   width: 100%;
+  height: auto;
+  padding: 0px;
   outline: none;
   transform: none;
-  position: relative;
-  white-space: pre-wrap;
-  word-break: break-word;
-  word-wrap: break-word;
-}
-
-.summary-ct p {
-  width: 100%;
-  outline: none;
-  transform: none;
-  position: relative;
   white-space: pre-wrap;
   word-break: break-word;
   word-wrap: break-word;
@@ -380,12 +326,13 @@ body {
   padding: 24px 0 0;
 }
 
-.dark-summary img {
+.dark-summary-line {
   position: relative;
-  width: 2px;
+  width: 20px;
   align-self: stretch;
   height: auto;
   overflow: hidden;
+  background-color: #FFB800;
 }
 
 .projects {
@@ -397,8 +344,8 @@ body {
   align-items: flex-start;
   flex-wrap: nowrap;
   gap: 0px;
-  overflow: hidden;
   padding: 80px 0;
+  overflow: hidden;
 }
 
 .projects-ct {
@@ -410,35 +357,24 @@ body {
   align-items: flex-start;
   flex-wrap: nowrap;
   gap: 40px;
-  overflow: hidden;
   padding: 0px;
-}
-
-.projects-ct h2 {
-  width: 100%;
-  outline: none;
-  transform: none;
-  position: relative;
-  white-space: pre-wrap;
-  word-break: break-word;
-  word-wrap: break-word;
+  overflow: visible;
 }
 
 .project-stack {
   position: relative;
   width: 100%;
-  /* display: flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-  gap: 0px; */
-  overflow: hidden;
+  gap: 0px;
   padding: 0px;
-  border: #000000 1px solid;
+  overflow: hidden;
 }
 
-.stack {
+.project-stack-inside {
   position: relative;
   width: 100%;
   display: flex;
@@ -447,82 +383,212 @@ body {
   align-items: flex-start;
   flex-wrap: nowrap;
   gap: 16px;
-  overflow: visible;
   padding: 0px;
+  overflow: visible;
 }
 
-.line {
+.inside1 {
   position: relative;
-  width: 9px;
+  width: 40px;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-content: center;
   align-items: center;
   align-self: stretch;
   flex-wrap: nowrap;
   gap: 0px;
-  height: auto;
+  padding: 0px;
   overflow: hidden;
-  padding: 0;
 }
 
-.gap {
+.inside1-gap1 {
   position: relative;
-  height: 7px;
   width: 1px;
+  height: 12px;
+  overflow: visible;
 }
 
-.yellow-circle {
+.circle {
+  background-color: #ffb800;
   position: relative;
-  width: 1fr;
+  width: 9px;
   height: 9px;
   border-radius: 9999px;
+  overflow: visible;
 }
 
-.light-line {
+.inside1-gap2 {
   position: relative;
   width: 1px;
-  flex: 1 0 0px;
+  height: 12px;
+  overflow: visible;
 }
 
-.content {
+.line {
   position: relative;
-  width: 1fr;
+  width: 1px;
+  flex: 1 1 0;
+  background-color: #999;
+  opacity: 0.6;
+  overflow: visible;
+}
+
+.inside2 {
+  position: relative;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  flex: 1 0 0px;
   flex-wrap: nowrap;
-  gap: 30px;
-  padding: 0 0 80px;
+  gap: 40px;
+  padding: 0px 0px 80px 0px;
 }
 
-.content-heading {
+.inside2 a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.overview {
   position: relative;
-  width: 1fr;
+  width: 100%;
+}
+
+.project-card1 {
+  position: relative;
+  width: 300px;
+  height: 300px;
   overflow: hidden;
-  padding: 0;
+  border-radius: 16px;
+  border: none;
+  cursor: pointer;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(27, 27, 27, 0.9)),
+    url(res/netflix.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.content-heading h3 {
-  outline: none;
-  transform: none;
-  white-space: pre-wrap;
-  word-break: break-word;
-  word-wrap: break-word;
+.project-card1 img {
+  position: absolute;
+  top: 12px;
+  right: 12px;
 }
 
-.content-desc {
+
+.project-card1 h4 {
   position: relative;
-  width: 1fr;
-  height: auto;
-  outline: none;
-  transform: none;
-  white-space: pre-wrap;
-  word-break: break-word;
-  word-wrap: break-word;
+  width: 100%;
 }
+
+.project-card1 p {
+  position: relative;
+  width: 100%;
+
+}
+
+.project-card2 {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 16px;
+  border: none;
+  cursor: pointer;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(27, 27, 27, 0.9)),
+    url(res/to-do.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.project-card2 img {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+}
+
+
+.project-card2 h4 {
+  position: relative;
+  width: 100%;
+}
+
+.project-card2 p {
+  position: relative;
+  width: 100%;
+
+}
+
+.project-card {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  background: linear-gradient(rgba(0, 0, 0, 0) 50%, rgb(27, 27, 27) 100%);
+}
+
+.project-card img {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+}
+
+.text {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 14px;
+  width: 270px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  gap: 4px;
+  padding: 0px;
+  overflow: visible;
+}
+
+.project-card h4 {
+  position: relative;
+  width: 100%;
+}
+
+.project-card p {
+  position: relative;
+  width: 100%;
+
+}
+
+.desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  gap: 20px;
+}
+
+.desc h4 {
+  color: #FFB800;
+
+}
+
+.desc a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
 
 .skills {
   position: relative;
@@ -579,8 +645,8 @@ body {
   width: 493px;
   height: 124px;
   display: grid;
-  grid-template-columns: repeat(2, minmax(50px, 1fr));
-  grid-template-rows: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(50px, 100%));
+  grid-template-rows: repeat(3, minmax(0, 100%));
   gap: 0px;
   padding: 0px;
   overflow: hidden;
@@ -600,11 +666,13 @@ body {
   overflow: hidden;
 }
 
-.skills-text-div img {
+.skills-yello-circle {
   position: relative;
   height: 9px;
   width: 9px;
-  border-radius: 9999px;
+  border-radius: 50%;
+  background-color: #FFB800;
+
 }
 
 .skills-logo {
@@ -612,8 +680,8 @@ body {
   width: 650px;
   height: auto;
   display: grid;
-  grid-template-columns: repeat(5, minmax(50px, 1fr));
-  grid-template-rows: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(50px, 100%));
+  grid-template-rows: repeat(2, minmax(0, 100%));
   gap: 0px;
   padding: 0px;
   overflow: hidden;
@@ -776,7 +844,7 @@ body {
 .education-stack-inside1 {
   position: relative;
   width: 9px;
-  height: 1fr;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -790,15 +858,7 @@ body {
 .upper-gap {
   position: relative;
   width: 1px;
-  height: 9px;
-}
-
-.education-stack-inside1 img {
-  position: relative;
-  width: 1fr;
-  height: 9px;
-  border-radius: 9999px;
-  overflow: hidden;
+  height: 10px;
 }
 
 .education-stack-inside2 {
@@ -860,7 +920,7 @@ body {
 .certificate-stack-inside1 {
   position: relative;
   width: 9px;
-  height: 1fr;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -868,20 +928,6 @@ body {
   flex-wrap: nowrap;
   gap: 0px;
   padding: 0px;
-  overflow: hidden;
-}
-
-.upper-gap {
-  position: relative;
-  width: 1px;
-  height: 9px;
-}
-
-.certificate-stack-inside1 img {
-  position: relative;
-  width: 1fr;
-  height: 9px;
-  border-radius: 9999px;
   overflow: hidden;
 }
 
@@ -904,7 +950,7 @@ body {
 
 .links {
   position: relative;
-  width: 1fr;
+  width: 100%;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
