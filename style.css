@@ -13,8 +13,38 @@ body {
   background-image: url(res/desktop.jpg);
   background-size: cover;
   background-position: center;
-  max-height: 100vh;
+  /* max-height: 100vh; */
   background-attachment: fixed;
+}
+
+.background-blur-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background-color: rgba(0, 0, 0, 0);
+  pointer-events: none;
+
+  /* Initial blur state */
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+
+  transition: backdrop-filter 0.5s ease-out, -webkit-backdrop-filter 0.5s ease-out, background-color 0.5s ease-out;
+}
+
+/* .background-blur-overlay.active-background-blur {
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  background-color: hsla(0, 0%, 0%, 0.671);
+} */
+
+
+.background-blur-overlay.active-background-blur {
+  backdrop-filter: blur(8px) brightness(1.2) contrast(1.1);
+  -webkit-backdrop-filter: blur(10px) brightness(1.2) contrast(1.1);
+  background-color: rgba(10, 10, 10, 0.705);
 }
 
 .heading1 {
@@ -230,7 +260,6 @@ body {
   left: 50%;
   transform: translateX(-50%);
   width: 720px;
-  background-color: hsla(0, 0%, 100%, 0.1);
   border-radius: 999px;
   display: flex;
   justify-content: space-between;
@@ -240,10 +269,14 @@ body {
   overflow: hidden;
   border: none;
   cursor: pointer;
-  z-index: 5;
+  z-index: 10;
+  background-color: hsla(0, 0%, 100%, 0.1);
+  backdrop-filter: blur(16px);
 }
 
-.menu-btn {
+.menu-button-solo {
+  position: relative;
+  width: 100%;
   height: 48px;
   flex-grow: 1;
   flex-shrink: 1;
@@ -251,9 +284,29 @@ body {
   background-color: transparent;
   border: none;
   border-radius: 999px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 5px;
+  padding: 0px;
+}
+
+.menu-button-solo img {
+  width: 20px;
+  height: 20px;
+}
+
+
+.menu-btn {
+  background-color: transparent;
+  border: none;
+  border-radius: 999px;
   font-family: "Albert Sans";
   color: #ffffff;
-  font-weight: semi-bold;
+  font-weight: 700;
   font-size: 16px;
   text-transform: none;
   text-decoration: none;
@@ -263,7 +316,7 @@ body {
   cursor: pointer;
 }
 
-.menu-btn-selected {
+.menu-butten-solo-selected {
   height: 48px;
   flex-grow: 1;
   flex-shrink: 1;
