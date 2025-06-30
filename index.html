@@ -129,7 +129,7 @@
                         <div class="skills-logo">
                             <div class="skills-logo-stack">
                                 <div class="logo-stack-inside">
-                                    <div class="skill-icon">
+                                    <div class="skill-icon" id="html">
                                         <img src="res/html.svg">
                                     </div>
                                     <h6 class="logo-label">HTML</h6>
@@ -137,7 +137,7 @@
                             </div>
                             <div class="skills-logo-stack">
                                 <div class="logo-stack-inside">
-                                    <div class="skill-icon">
+                                    <div class="skill-icon" id="css">
                                         <img src="res/css.svg">
                                     </div>
                                     <h6 class="logo-label">CSS</h6>
@@ -145,7 +145,7 @@
                             </div>
                             <div class="skills-logo-stack">
                                 <div class="logo-stack-inside">
-                                    <div class="skill-icon">
+                                    <div class="skill-icon" id="js">
                                         <img src="res/javascript.svg">
                                     </div>
                                     <h6 class="logo-label">JavaScript</h6>
@@ -170,17 +170,17 @@
                             <div class="skills-logo-stack">
                                 <div class="logo-stack-inside">
                                     <div class="skill-icon">
-                                        <img id="mongo" src="res/mongodb.svg">
-                                    </div>
-                                    <h6 class="logo-label">MongoDB</h6>
-                                </div>
-                            </div>
-                            <div class="skills-logo-stack">
-                                <div class="logo-stack-inside">
-                                    <div class="skill-icon">
                                         <img src="res/mysql.svg">
                                     </div>
                                     <h6 class="logo-label">MySQL</h6>
+                                </div>
+                            </div>
+                            <div class="skills-logo-stack">
+                                <div class="logo-stack-inside" id="mongodb">
+                                    <div class="skill-icon" id="mongodb-icon">
+                                        <img id="mongo" src="res/mongodb.svg">
+                                    </div>
+                                    <h6 class="logo-label">MongoDB</h6>
                                 </div>
                             </div>
                             <div class="skills-logo-stack">
@@ -240,36 +240,124 @@
                                 </div>
                             </div>
                         </div>
+
+
                         <div class="language">
-                            <h3 class="heading3">Language</h3>
+                            <h3 class="heading3">Languages</h3>
                             <div class="language-stack">
-                                <div class="language-stack1">
+                                <div class="language-stack-inside">
                                     <h4 class="bodyL">Gujarati</h4>
-                                    <!--LANGUAGE BAR -->
+                                    <img class="language-bar" src="res/100.png">
                                 </div>
-                                <div class="language-stack2">
+                                <div class="language-stack-inside">
                                     <h4 class="bodyL">English</h4>
-                                    <!--LANGUAGE BAR -->
+                                    <img class="language-bar" src="res/85.png">
                                 </div>
-                                <div class="language-stack3">
+                                <div class="language-stack-inside">
                                     <h4 class="bodyL">Hindi</h4>
-                                    <!--LANGUAGE BAR -->
+                                    <img class="language-bar" src="res/100.png">
                                 </div>
                             </div>
                         </div>
                         <div class="education">
-                            <h3 class="heading3">EDUCATION & CERTIFICATES</h3>
+                            <h3 class="heading3">EDUCATION</h3>
                             <div class="education-stack">
-
                                 <div class="education-stack-solo">
                                     <div class="education-stack-inside1">
                                         <div class="upper-gap"></div>
                                         <img src="res/yello-circle.png">
                                     </div>
                                     <div class="education-stack-inside2">
-                                        <h4 class="bodyL">Gujarat Technological University</h4>
-                                        <p class="body">Bachelor of Technology in Information Technology</p>
-                                        <p class="body">2022 - 2026</p>
+                                        <h4 class="bodyL">Gujarat Technological University (GTU)</h4>
+                                        <p class="body">Bachelor of Engineering: Information Technology (2022 - 2026)</p>
+                                    </div>
+                                </div>
+                                <div class="education-stack-solo">
+                                    <div class="education-stack-inside1">
+                                        <div class="upper-gap"></div>
+                                        <img src="res/yello-circle.png">
+                                    </div>
+                                    <div class="education-stack-inside2">
+                                        <h4 class="bodyL">Gujarat Secondary And Higher Secondary Education Board</h4>
+                                        <p class="body">H.S.C - PR: 84.69 (76%)</p>
+                                        <p class="body">S.S.C - PR: 99.2 (87%)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="certificate">
+                            <h3 class="heading3">EXPERIENCE & CERTIFICATES</h3>
+                            <div class="certificate-stack">
+
+                                <div class="certificate-stack-solo">
+                                    <div class="certificate-stack-inside1">
+                                        <div class="upper-gap"></div>
+                                        <img src="res/yello-circle.png">
+                                    </div>
+                                    <div class="certificate-stack-inside2">
+                                        <h4 class="bodyL">Web Development Intern</h4>
+                                        <p class="body">- Elevate Labs (1 Month)</p>
+                                    </div>
+                                </div>
+                                <div class="certificate-stack-solo">
+                                    <div class="certificate-stack-inside1">
+                                        <div class="upper-gap"></div>
+                                        <img src="res/yello-circle.png">
+                                    </div>
+                                    <div class="certificate-stack-inside2">
+                                        <h4 class="bodyL">Full Stack Developer Intern</h4>
+                                        <p class="body">- CreTech (1 Month)</p>
+                                    </div>
+                                </div>
+                                <div class="certificate-stack-solo">
+                                    <div class="certificate-stack-inside1">
+                                        <div class="upper-gap"></div>
+                                        <img src="res/yello-circle.png">
+                                    </div>
+                                    <div class="certificate-stack-inside2">
+                                        <h4 class="bodyL">Website Design & Development Internship</h4>
+                                        <p class="body">- Internship Studio (1 Month)</p>
+                                    </div>
+                                </div>
+                                <div class="certificate-stack-solo">
+                                    <div class="certificate-stack-inside1">
+                                        <div class="upper-gap"></div>
+                                        <img src="res/yello-circle.png">
+                                    </div>
+                                    <div class="certificate-stack-inside2">
+                                        <h4 class="bodyL">Core Java</h4>
+                                        <p class="body">- Internshala Trainings (Marks: 90%)</p>
+                                    </div>
+                                </div>
+                                <div class="certificate-stack-solo">
+                                    <div class="certificate-stack-inside1">
+                                        <div class="upper-gap"></div>
+                                        <img src="res/yello-circle.png">
+                                    </div>
+                                    <div class="certificate-stack-inside2">
+                                        <h4 class="bodyL">Artificial Intelligence</h4>
+                                        <p class="body">- Rinex Organization (Grade: A+)</p>
+                                    </div>
+                                </div>
+                                <div class="certificate-stack-solo">
+                                    <div class="certificate-stack-inside1">
+                                        <div class="upper-gap"></div>
+                                        <img src="res/yello-circle.png">
+                                    </div>
+                                    <div class="certificate-stack-inside2">
+                                        <h4 class="bodyL">Internship & Job Preparation</h4>
+                                        <p class="body">- Internshala Trainings (Marks: 85%)</p>
+                                    </div>
+                                </div>
+                                <div class="certificate-stack-solo">
+                                    <div class="certificate-stack-inside1">
+                                        <div class="upper-gap"></div>
+                                        <img src="res/yello-circle.png">
+                                    </div>
+                                    <div class="certificate-stack-inside2">
+                                        <h4 class="bodyL">Communication Skills</h4>
+                                        <p class="body">- TCS iON</p>
                                     </div>
                                 </div>
 
@@ -308,8 +396,13 @@
                         </div>
                     </div>
                 </div>
+                <div class="footer">
+                    <p>© 2025 Tirth Dadhaniya. All rights reserved.</p>
+                </div>
             </div>
-    </div>
+        </div>
+
+
     <script src="script.js"></script>
 
 </body>
