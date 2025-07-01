@@ -11,3 +11,33 @@ document.querySelectorAll(".menu-btn").forEach((btn) => {
     }
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const lightSummary = document.getElementById("light-summary");
+  const linksText = document.querySelector(".links-text");
+  const backgroundBlurOverlay = document.querySelector(".background-blur-overlay");
+
+  if (!lightSummary || !linksText || !backgroundBlurOverlay) {
+    console.warn("One or more elements for blur effect not found. Ensure IDs/classes are correct.");
+    return;
+  }
+
+  const handleScrollBlur = () => {
+    const lightSummaryRect = lightSummary.getBoundingClientRect();
+    const linksTextRect = linksText.getBoundingClientRect();
+
+    const activateBlur = lightSummaryRect.top <= window.innerHeight;
+
+    const deactivateBlur = linksTextRect.bottom <= 0;
+
+    if (activateBlur && !deactivateBlur) {
+      backgroundBlurOverlay.classList.add("active-background-blur");
+    } else {
+      backgroundBlurOverlay.classList.remove("active-background-blur");
+    }
+  };
+
+  window.addEventListener("scroll", handleScrollBlur);
+
+  handleScrollBlur();
+});
