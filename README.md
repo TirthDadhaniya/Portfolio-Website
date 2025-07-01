@@ -21,7 +21,7 @@ It is built using **HTML**, **CSS**, and **JavaScript** — with a focus on cust
 ## Live Demo
 
 You can view the live website here:  
-[https://tirthdadhaniya.github.io/](https://tirthdadhaniya.github.io/)
+[tirthdadhaniya.free.nf/](https://tirthdadhaniya.free.nf/)
 
 ## Contact
 
