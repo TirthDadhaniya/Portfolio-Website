@@ -1,0 +1,317 @@
+@import url("https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+@media screen and (max-width: 809px) {
+
+    body {
+        background-image: url(res/phone.jpg);
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+
+    .background-blur-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: -1;
+        background-color: rgba(0, 0, 0, 0);
+        pointer-events: none;
+
+        backdrop-filter: blur(0px);
+        -webkit-backdrop-filter: blur(0px);
+        transition: backdrop-filter 0.5s ease-out, -webkit-backdrop-filter 0.5s ease-out, background-color 0.5s ease-out;
+    }
+
+    .background-blur-overlay.active-background-blur {
+        backdrop-filter: blur(40px);
+        -webkit-backdrop-filter: blur(10px);
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .menu-mobile {
+        position: fixed;
+        bottom: 72px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 312px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: nowrap;
+        padding: 4px;
+        overflow: hidden;
+        border: none;
+        cursor: pointer;
+        z-index: 10;
+        background-color: hsla(0, 0%, 100%, 0.1);
+        backdrop-filter: blur(16px);
+        border-radius: 999px;
+    }
+
+    .menu-mobile-btn {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        position: relative;
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 0;
+        background-color: transparent;
+        border: none;
+        border-radius: 999px;
+        cursor: pointer;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+        gap: 0px;
+        padding: 0px;
+    }
+
+    .menu-mobile-btn img {
+        width: 24px;
+        height: 24px;
+    }
+
+    .menu-mobile-btn-selected {
+        height: 48px;
+        width: 48px;
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 0;
+        background-color: white;
+        border-radius: 999px;
+        color: #000000;
+        cursor: pointer;
+    }
+
+    .main-container {
+        position: relative;
+        width: 100%;
+        height: auto;
+        max-width: 1600px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        gap: 0px;
+        padding: 0px 20px;
+        overflow: visible;
+        z-index: 3;
+    }
+
+    .home {
+        height: auto;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 40px;
+        padding: 40px 0px 0px 0px;
+        overflow: visible;
+    }
+
+    .opentowork {
+        position: static;
+        top: auto;
+        left: auto;
+        transform: none;
+        width: 100%;
+    }
+
+    .name {
+        position: static;
+        top: auto;
+        left: auto;
+        transform: none;
+        width: 100%;
+        height: 90vh;
+    }
+
+    .links-home {
+        width: 100%;
+        position: static;
+        top: auto;
+        left: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-wrap: nowrap;
+        gap: 20px;
+        transform: none;
+    }
+
+    .link-element {
+        overflow: visible;
+    }
+
+    .summary {
+        padding: 60px 0;
+    }
+
+    .summary-ct {
+        width: 100%;
+    }
+
+    .summary-ct {
+        width: 100%;
+    }
+
+    .dark-summary p {
+        font-size: 26px;
+    }
+
+    .projects {
+        padding: 60px 0;
+    }
+
+    .projects-ct {
+        width: 100%;
+    }
+
+    .project-stack-inside {
+        gap: 0px;
+    }
+
+    .skills {
+        padding: 60px 0px 60px 0px;
+        overflow: visible;
+    }
+
+    .skills-ct {
+        width: 100%;
+        overflow: visible;
+    }
+
+    .skills-stack {
+        gap: 64px;
+    }
+
+    .skills-text {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .skills-text-div {
+        height: auto;
+    }
+
+    .skills-logo {
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(50px, 100%));
+        grid-template-rows: repeat(7, minmax(0, 100%));
+    }
+
+    .skills-logo-stack {
+        align-items: center;
+    }
+
+    .logo-stack-inside {
+        gap: 8px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .language {
+        width: 100%;
+    }
+
+    .language-stack {
+        width: 100%;
+    }
+
+    .education {
+        width: 100%;
+    }
+
+    .education-stack {
+        width: 100%;
+    }
+
+    .education-stack-solo {
+        width: 100%;
+    }
+
+    .education-stack-inside1 {
+        width: 12px;
+    }
+
+
+    .education-stack-inside2 {
+        width: 100%;
+    }
+
+    .certificate-stack-inside1 {
+        position: relative;
+        width: 9px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: nowrap;
+        gap: 0px;
+        padding: 0px;
+        overflow: hidden;
+    }
+
+    .certificate-stack-inside2 {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        flex-wrap: nowrap;
+        gap: 0px;
+        padding: 0px;
+        overflow: hidden;
+    }
+
+    .certificate-stack-inside2 p {
+        color: #FFB800;
+    }
+
+    .links {
+        padding: 60px 0px 60px 0px;
+    }
+
+    .links-ct {
+        width: 100%;
+        overflow: visible;
+    }
+
+    .links-content {
+        width: 100%;
+    }
+
+    .links-logo {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .links-text {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 24px;
+    }
+}
