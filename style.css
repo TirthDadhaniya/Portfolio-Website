@@ -35,7 +35,7 @@ body {
 .background-blur-overlay.active-background-blur {
   backdrop-filter: blur(40px);
   -webkit-backdrop-filter: blur(10px);
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .heading1 {
