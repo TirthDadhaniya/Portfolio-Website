@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+
+@media screen and (max-width: 1199px) and (min-width: 810px) {
+
+    body {
+        background-image: url(res/tablet.jpg);
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+
+    .menu-mobile {
+        display: none;
+    }
+
+    .menu {
+        position: fixed;
+        bottom: 56px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .summary {
+        padding: 70px 0;
+    }
+
+    .summary-ct {
+        width: 70%;
+    }
+
+    .projects {
+        padding: 70px 0;
+    }
+
+    .projects-ct {
+        width: 70%;
+    }
+
+    .inside2 a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .project-card1 {
+        width: 280px;
+        height: 280px;
+    }
+
+    .project-card1 img {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+
+    .project-card2 {
+        width: 280px;
+        height: 280px;
+    }
+
+    .project-card2 img {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+
+    .project-card {
+        width: 280px;
+        height: 280px;
+    }
+
+    .project-card img {
+        top: 10px;
+        right: 10px;
+    }
+
+    .text {
+        bottom: 12px;
+        width: 250px;
+    }
+
+    .skills {
+        padding: 70px 0px;
+    }
+
+    .skills-ct {
+        width: 70%;
+        overflow: visible;
+    }
+
+    .links {
+        padding: 70px 0px;
+    }
+
+    .links-ct {
+        width: 70%;
+        overflow: visible;
+    }
+
+    .links-text {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+    }
+}
