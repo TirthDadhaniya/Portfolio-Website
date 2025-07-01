@@ -27,24 +27,15 @@ body {
   background-color: rgba(0, 0, 0, 0);
   pointer-events: none;
 
-  /* Initial blur state */
   backdrop-filter: blur(0px);
   -webkit-backdrop-filter: blur(0px);
-
   transition: backdrop-filter 0.5s ease-out, -webkit-backdrop-filter 0.5s ease-out, background-color 0.5s ease-out;
 }
 
-/* .background-blur-overlay.active-background-blur {
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  background-color: hsla(0, 0%, 0%, 0.671);
-} */
-
-
 .background-blur-overlay.active-background-blur {
-  backdrop-filter: blur(8px) brightness(1.2) contrast(1.1);
-  -webkit-backdrop-filter: blur(10px) brightness(1.2) contrast(1.1);
-  background-color: rgba(10, 10, 10, 0.705);
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .heading1 {
@@ -177,13 +168,6 @@ body {
   border-radius: 50%;
 }
 
-.opentowork img {
-  position: relative;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-}
-
 .name {
   position: absolute;
   left: 0;
@@ -244,14 +228,18 @@ body {
 .link-element {
   position: relative;
   display: flex;
-  flex-shrink: 0;
   flex-direction: row;
-  align-items: center;
   justify-content: flex-start;
+  align-items: center;
   flex-wrap: nowrap;
   gap: 10px;
-  overflow: hidden;
   padding: 0px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.menu-mobile {
+  display: none;
 }
 
 .menu {
@@ -376,7 +364,7 @@ body {
   gap: 32px;
   height: min-content;
   overflow: hidden;
-  padding: 24px 0 0;
+  padding: 24px 0px 0px 0px;
 }
 
 .dark-summary-line {
@@ -600,7 +588,7 @@ body {
   left: 50%;
   transform: translateX(-50%);
   bottom: 14px;
-  width: 270px;
+  width: 260px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -641,8 +629,6 @@ body {
   text-decoration: none;
 }
 
-
-
 .skills {
   position: relative;
   width: 100%;
@@ -669,17 +655,6 @@ body {
   overflow: hidden;
 }
 
-.skills-ct h2 {
-  position: relative;
-  width: 100%;
-  height: auto;
-  outline: none;
-  transform: none;
-  white-space: pre-wrap;
-  word-break: break-word;
-  word-wrap: break-word;
-}
-
 .skills-stack {
   position: relative;
   width: 100%;
@@ -690,7 +665,7 @@ body {
   flex-wrap: nowrap;
   gap: 104px;
   padding: 0px;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .skills-text {
@@ -734,10 +709,10 @@ body {
   height: auto;
   display: grid;
   grid-template-columns: repeat(5, minmax(50px, 100%));
-  grid-template-rows: repeat(2, minmax(0, 100%));
+  grid-template-rows: repeat(3, minmax(0, 100%));
   gap: 0px;
   padding: 0px;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .skills-logo-stack {
@@ -747,7 +722,7 @@ body {
   align-items: flex-start;
   flex-wrap: nowrap;
   padding: 20px 0px;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .logo-stack-inside {
@@ -833,9 +808,10 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  flex-wrap: nowrap;
   gap: 16px;
   padding: 0px;
-  flex-wrap: nowrap;
+  overflow: hidden;
 }
 
 .language-stack-inside {
@@ -896,7 +872,7 @@ body {
 
 .education-stack-inside1 {
   position: relative;
-  width: 9px;
+  width: 12px;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -972,7 +948,7 @@ body {
 
 .certificate-stack-inside1 {
   position: relative;
-  width: 9px;
+  width: 12px;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -1080,7 +1056,7 @@ body {
   flex-wrap: nowrap;
   gap: 10px;
   padding: 0px;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .link-number {
@@ -1099,13 +1075,4 @@ body {
   position: relative;
   width: 26px;
   height: 26px;
-}
-
-.footer {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 10px;
 }
