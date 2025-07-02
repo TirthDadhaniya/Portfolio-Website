@@ -134,6 +134,11 @@
         overflow: visible;
     }
 
+    .link-element h4 {
+        color: #ffffff;
+        text-decoration: none;
+    }
+
     .summary {
         padding: 60px 0;
     }
