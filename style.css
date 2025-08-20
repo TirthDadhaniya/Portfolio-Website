@@ -577,7 +577,7 @@ body {
   cursor: pointer;
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.4), rgba(27, 27, 27, 0.9)),
-    url(res/to-do.png);
+    url(res/SaaS.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -596,6 +596,40 @@ body {
 }
 
 .project-card2 p {
+  position: relative;
+  width: 100%;
+
+}
+
+.project-card3 {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 16px;
+  border: none;
+  cursor: pointer;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(27, 27, 27, 0.9)),
+    url(res/to-do.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.project-card3 img {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+}
+
+
+.project-card3 h4 {
+  position: relative;
+  width: 100%;
+}
+
+.project-card3 p {
   position: relative;
   width: 100%;
 
