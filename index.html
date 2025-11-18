@@ -4,9 +4,54 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="google-site-verification" content="G2vrLyEnzAc4GO9zSunS5zfYeqLt2z2O-Nv3omz--6I" />
-    <title>Tirth Dadhaniya</title>
+
+    <!-- SEO Meta Tags -->
+    <title>Tirth Dadhaniya - Web Developer | Portfolio</title>
+    <meta
+      name="description"
+      content="BTech final year student and Web Developer specializing in C, Java, HTML, CSS, JavaScript, and automation. Explore my projects and skills in web development, UI/UX design with Figma and Framer."
+    />
+    <meta
+      name="keywords"
+      content="Tirth Dadhaniya, Web Developer, BTech Student, Java, Java Developer, JavaScript, JS, HTML, CSS, MongoDB, MySQL, Figma, Framer, N8N Automation, N8N, Portfolio"
+    />
+    <meta name="author" content="Tirth Dadhaniya" />
+    <meta name="theme-color" content="#000000" />
+
+    <!-- Open Graph Meta Tags (for social media sharing) -->
+    <meta property="og:title" content="Tirth Dadhaniya - Web Developer | Portfolio" />
+    <meta
+      property="og:description"
+      content="BTech final year student and Web Developer specializing in C, Java, HTML, CSS, JavaScript, and automation. Explore my projects and skills."
+    />
+    <meta property="og:image" content="https://tirthdadhaniya.me/res/profile-pic.png" />
+    <meta property="og:url" content="https://tirthdadhaniya.me/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Tirth Dadhaniya Portfolio" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Tirth Dadhaniya - Web Developer | Portfolio" />
+    <meta
+      name="twitter:description"
+      content="BTech final year student and Web Developer specializing in C, Java, HTML, CSS, JavaScript, and automation."
+    />
+    <meta name="twitter:image" content="https://tirthdadhaniya.me/res/profile-pic.png" />
+
+    <!-- Canonical URL -->
     <link rel="canonical" href="https://tirthdadhaniya.me/" />
+
+    <!-- Favicon -->
     <link rel="icon" type="image/png" href="res/Website Logo.png" />
+
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="style.css" as="style" />
+    <link rel="preload" href="script.js" as="script" />
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json" />
+
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="1199-810.css" media="screen and (max-width: 1199px) and (min-width: 810px)" />
     <link rel="stylesheet" href="809-0.css" media="screen and (max-width: 809px)" />
@@ -15,43 +60,103 @@
   <body>
     <div class="background-blur-overlay"></div>
     <div class="menu">
-      <div class="menu-button-solo" id="home-btn" data-target="home">
-        <img src="res/home-w.svg" />
+      <div
+        class="menu-button-solo"
+        id="home-btn"
+        data-target="home"
+        role="button"
+        aria-label="Navigate to Home section"
+      >
+        <img src="res/home-w.svg" alt="Home icon" />
         <button class="menu-btn">Home</button>
       </div>
-      <div class="menu-button-solo" id="summary-btn" data-target="summary">
-        <img src="res/summary-w.svg" />
+      <div
+        class="menu-button-solo"
+        id="summary-btn"
+        data-target="summary"
+        role="button"
+        aria-label="Navigate to Summary section"
+      >
+        <img src="res/summary-w.svg" alt="Summary icon" />
         <button class="menu-btn">Summary</button>
       </div>
-      <div class="menu-button-solo" id="projects-btn" data-target="projects">
-        <img src="res/projects-w.svg" />
+      <div
+        class="menu-button-solo"
+        id="projects-btn"
+        data-target="projects"
+        role="button"
+        aria-label="Navigate to Projects section"
+      >
+        <img src="res/projects-w.svg" alt="Projects icon" />
         <button class="menu-btn">Projects</button>
       </div>
-      <div class="menu-button-solo" id="skills-btn" data-target="skills">
-        <img src="res/skills-w.svg" />
+      <div
+        class="menu-button-solo"
+        id="skills-btn"
+        data-target="skills"
+        role="button"
+        aria-label="Navigate to Skills section"
+      >
+        <img src="res/skills-w.svg" alt="Skills icon" />
         <button class="menu-btn">Skills</button>
       </div>
-      <div class="menu-button-solo" id="contact-btn" data-target="links">
-        <img src="res/links-w.svg" />
+      <div
+        class="menu-button-solo"
+        id="contact-btn"
+        data-target="links"
+        role="button"
+        aria-label="Navigate to Links section"
+      >
+        <img src="res/links-w.svg" alt="Links icon" />
         <button class="menu-btn">Links</button>
       </div>
     </div>
 
-    <div class="menu-mobile">
-      <div class="menu-mobile-btn menu-btn" id="home-btn" data-target="home">
-        <img src="res/home-w.svg" />
+    <div class="menu-mobile" role="navigation" aria-label="Mobile navigation">
+      <div
+        class="menu-mobile-btn menu-btn"
+        id="home-btn"
+        data-target="home"
+        role="button"
+        aria-label="Navigate to Home section"
+      >
+        <img src="res/home-w.svg" alt="Home icon" />
       </div>
-      <div class="menu-mobile-btn menu-btn" id="summary-btn" data-target="summary">
-        <img src="res/summary-w.svg" />
+      <div
+        class="menu-mobile-btn menu-btn"
+        id="summary-btn"
+        data-target="summary"
+        role="button"
+        aria-label="Navigate to Summary section"
+      >
+        <img src="res/summary-w.svg" alt="Summary icon" />
       </div>
-      <div class="menu-mobile-btn menu-btn" id="projects-btn" data-target="projects">
-        <img src="res/projects-w.svg" />
+      <div
+        class="menu-mobile-btn menu-btn"
+        id="projects-btn"
+        data-target="projects"
+        role="button"
+        aria-label="Navigate to Projects section"
+      >
+        <img src="res/projects-w.svg" alt="Projects icon" />
       </div>
-      <div class="menu-mobile-btn menu-btn" id="skills-btn" data-target="skills">
-        <img src="res/skills-w.svg" />
+      <div
+        class="menu-mobile-btn menu-btn"
+        id="skills-btn"
+        data-target="skills"
+        role="button"
+        aria-label="Navigate to Skills section"
+      >
+        <img src="res/skills-w.svg" alt="Skills icon" />
       </div>
-      <div class="menu-mobile-btn menu-btn" id="contact-btn" data-target="links">
-        <img src="res/links-w.svg" />
+      <div
+        class="menu-mobile-btn menu-btn"
+        id="contact-btn"
+        data-target="links"
+        role="button"
+        aria-label="Navigate to Links section"
+      >
+        <img src="res/links-w.svg" alt="Links icon" />
       </div>
     </div>
 
@@ -68,11 +173,11 @@
         <div class="links-home">
           <div class="link-clm">
             <div class="link-element">
-              <img src="res/mail.svg" />
+              <img src="res/mail.svg" alt="Email icon" />
               <h4 class="bodyL" id="mail">work.tirthdadhaniya@gmail.com</h4>
             </div>
             <div class="link-element">
-              <img src="res/linkedin.svg" />
+              <img src="res/linkedin.svg" alt="LinkedIn icon" />
               <h4 class="bodyL" id="linkedin">
                 <a
                   href="https://www.linkedin.com/in/tirthdadhaniya/"
@@ -86,11 +191,11 @@
           </div>
           <div class="link-clm">
             <div class="link-element">
-              <img src="res/phone.svg" />
+              <img src="res/phone.svg" alt="Phone icon" />
               <h4 class="bodyL" id="number">+91 8734823589</h4>
             </div>
             <div class="link-element">
-              <img src="res/location.svg" />
+              <img src="res/location.svg" alt="Location icon" />
               <h4 class="bodyL" id="home">Ahmedabad, Gujarat, IN</h4>
             </div>
           </div>
@@ -453,7 +558,7 @@
               <div class="skills-logo-stack">
                 <div class="logo-stack-inside">
                   <div class="skill-icon" id="html">
-                    <img src="res/html.svg" />
+                    <img src="res/html.svg" alt="HTML logo" loading="lazy" />
                   </div>
                   <h6 class="logo-label">HTML</h6>
                 </div>
@@ -461,7 +566,7 @@
               <div class="skills-logo-stack">
                 <div class="logo-stack-inside">
                   <div class="skill-icon" id="css">
-                    <img src="res/css.svg" />
+                    <img src="res/css.svg" alt="CSS logo" loading="lazy" />
                   </div>
                   <h6 class="logo-label">CSS</h6>
                 </div>
@@ -469,7 +574,7 @@
               <div class="skills-logo-stack">
                 <div class="logo-stack-inside">
                   <div class="skill-icon" id="js">
-                    <img src="res/javascript.svg" />
+                    <img src="res/javascript.svg" alt="JavaScript logo" loading="lazy" />
                   </div>
                   <h6 class="logo-label">JavaScript</h6>
                 </div>
@@ -477,7 +582,7 @@
               <div class="skills-logo-stack">
                 <div class="logo-stack-inside">
                   <div class="skill-icon">
-                    <img src="res/java.svg" />
+                    <img src="res/java.svg" alt="Java logo" loading="lazy" />
                   </div>
                   <h6 class="logo-label">Java</h6>
                 </div>
@@ -485,7 +590,7 @@
               <div class="skills-logo-stack">
                 <div class="logo-stack-inside">
                   <div class="skill-icon">
-                    <img src="res/c.svg" />
+                    <img src="res/c.svg" alt="C programming logo" loading="lazy" />
                   </div>
                   <h6 class="logo-label">C</h6>
                 </div>
@@ -493,7 +598,7 @@
               <div class="skills-logo-stack">
                 <div class="logo-stack-inside">
                   <div class="skill-icon">
-                    <img src="res/mysql.svg" />
+                    <img src="res/mysql.svg" alt="MySQL logo" loading="lazy" />
                   </div>
                   <h6 class="logo-label">MySQL</h6>
                 </div>
@@ -501,7 +606,7 @@
               <div class="skills-logo-stack">
                 <div class="logo-stack-inside" id="mongodb">
                   <div class="skill-icon" id="mongodb-icon">
-                    <img id="mongo" src="res/mongodb.svg" />
+                    <img id="mongo" src="res/mongodb.svg" alt="MongoDB logo" loading="lazy" />
                   </div>
                   <h6 class="logo-label">MongoDB</h6>
                 </div>
@@ -509,7 +614,7 @@
               <div class="skills-logo-stack">
                 <div class="logo-stack-inside">
                   <div class="skill-icon">
-                    <img src="res/vs-code.svg" />
+                    <img src="res/vs-code.svg" alt="Visual Studio Code logo" loading="lazy" />
                   </div>
                   <h6 class="logo-label">VS Code</h6>
                 </div>
@@ -517,7 +622,7 @@
               <div class="skills-logo-stack">
                 <div class="logo-stack-inside">
                   <div class="skill-icon">
-                    <img src="res/intellij-idea.svg" />
+                    <img src="res/intellij-idea.svg" alt="IntelliJ IDEA logo" loading="lazy" />
                   </div>
                   <h6 class="logo-label">IntelliJ IDEA</h6>
                 </div>
@@ -525,7 +630,7 @@
               <div class="skills-logo-stack">
                 <div class="logo-stack-inside">
                   <div class="skill-icon">
-                    <img src="res/git.svg" />
+                    <img src="res/git.svg" alt="Git logo" loading="lazy" />
                   </div>
                   <h6 class="logo-label">Git</h6>
                 </div>
@@ -533,7 +638,7 @@
               <div class="skills-logo-stack">
                 <div class="logo-stack-inside">
                   <div class="skill-icon">
-                    <img src="res/github.svg" />
+                    <img src="res/github.svg" alt="GitHub logo" loading="lazy" />
                   </div>
                   <h6 class="logo-label">Github</h6>
                 </div>
@@ -541,7 +646,7 @@
               <div class="skills-logo-stack">
                 <div class="logo-stack-inside">
                   <div class="skill-icon">
-                    <img src="res/figma.svg" />
+                    <img src="res/figma.svg" alt="Figma logo" loading="lazy" />
                   </div>
                   <h6 class="logo-label">Figma</h6>
                 </div>
@@ -549,7 +654,7 @@
               <div class="skills-logo-stack">
                 <div class="logo-stack-inside">
                   <div class="skill-icon">
-                    <img src="res/framer.svg" />
+                    <img src="res/framer.svg" alt="Framer logo" loading="lazy" />
                   </div>
                   <h6 class="logo-label">Framer</h6>
                 </div>
@@ -569,15 +674,15 @@
               <div class="language-stack">
                 <div class="language-stack-inside">
                   <h4 class="bodyL">Gujarati</h4>
-                  <img class="language-bar" src="res/100.png" />
+                  <img class="language-bar" src="res/100.png" alt="Gujarati proficiency 100%" loading="lazy" />
                 </div>
                 <div class="language-stack-inside">
                   <h4 class="bodyL">English</h4>
-                  <img class="language-bar" src="res/85.png" />
+                  <img class="language-bar" src="res/85.png" alt="English proficiency 85%" loading="lazy" />
                 </div>
                 <div class="language-stack-inside">
                   <h4 class="bodyL">Hindi</h4>
-                  <img class="language-bar" src="res/100.png" />
+                  <img class="language-bar" src="res/100.png" alt="Hindi proficiency 100%" loading="lazy" />
                 </div>
               </div>
             </div>
@@ -692,26 +797,26 @@
           <h2 class="heading2">Links</h2>
           <div class="links-content">
             <div class="links-logo">
-              <a href="https://www.linkedin.com/in/tirthdadhaniya/" target="_blank">
-                <img src="res/linkedin-color.svg" />
+              <a href="https://www.linkedin.com/in/tirthdadhaniya/" target="_blank" aria-label="Visit LinkedIn profile">
+                <img src="res/linkedin-color.svg" alt="LinkedIn" loading="lazy" />
               </a>
-              <a href="https://github.com/TirthDadhaniya" target="_blank">
-                <img src="res/github-sq.svg" />
+              <a href="https://github.com/TirthDadhaniya" target="_blank" aria-label="Visit GitHub profile">
+                <img src="res/github-sq.svg" alt="GitHub" loading="lazy" />
               </a>
-              <a href="https://www.instagram.com/tirth___.05/" target="_blank">
-                <img src="res/instagram.svg" />
+              <a href="https://www.instagram.com/tirth___.05/" target="_blank" aria-label="Visit Instagram profile">
+                <img src="res/instagram.svg" alt="Instagram" loading="lazy" />
               </a>
-              <a href="mailto:work.tirthdadhaniya@gmail.com">
-                <img src="res/gmail.svg" alt="Email" style="width: 40px; height: 40px" />
+              <a href="mailto:work.tirthdadhaniya@gmail.com" aria-label="Send email">
+                <img src="res/gmail.svg" alt="Email" style="width: 40px; height: 40px" loading="lazy" />
               </a>
             </div>
             <div class="links-text">
               <div class="link-mail">
-                <img class="link-svg" src="res/mail.svg" />
+                <img class="link-svg" src="res/mail.svg" alt="Email icon" />
                 <h4 class="bodyL">work.tirthdadhaniya@gmail.com</h4>
               </div>
               <div class="link-number">
-                <img class="link-svg" src="res/phone.svg" />
+                <img class="link-svg" src="res/phone.svg" alt="Phone icon" />
                 <h4 class="bodyL">+91 8734823589</h4>
               </div>
             </div>
@@ -722,6 +827,46 @@
         </div>
       </div>
     </div>
+
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Tirth Dadhaniya",
+        "jobTitle": "Web Developer",
+        "description": "BTech final year student and Web Developer specializing in C, Java, HTML, CSS, JavaScript, and automation",
+        "url": "https://tirthdadhaniya.me/",
+        "image": "https://tirthdadhaniya.me/res/profile-pic.png",
+        "email": "work.tirthdadhaniya@gmail.com",
+        "telephone": "+91-8734823589",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Ahmedabad",
+          "addressRegion": "Gujarat",
+          "addressCountry": "IN"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/in/tirthdadhaniya/",
+          "https://github.com/TirthDadhaniya",
+          "https://www.instagram.com/tirth___.05/"
+        ],
+        "knowsAbout": [
+          "Web Development",
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "Java",
+          "C Programming",
+          "MySQL",
+          "MongoDB",
+          "Git",
+          "Figma",
+          "Framer",
+          "N8N Automation"
+        ]
+      }
+    </script>
 
     <script src="script.js"></script>
   </body>
