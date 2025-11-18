@@ -161,7 +161,7 @@ document.querySelectorAll(".menu-button-solo").forEach((btn) => {
     // Re-enable scroll-based navigation after smooth scroll completes
     setTimeout(() => {
       isScrollingProgrammatically = false;
-    }, 1000); // Adjust timeout based on your smooth scroll duration
+    }, 1500); // Extended to cover full smooth scroll including deceleration phase
   });
 });
 
@@ -186,6 +186,6 @@ document.querySelectorAll(".menu-mobile-btn").forEach((btn) => {
     // Re-enable scroll-based navigation after smooth scroll completes
     setTimeout(() => {
       isScrollingProgrammatically = false;
-    }, 1000); // Adjust timeout based on your smooth scroll duration
+    }, 1500); // Extended to cover full smooth scroll including deceleration phase
   });
 });
