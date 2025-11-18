@@ -86,11 +86,16 @@ function setActiveMenuItem(targetId) {
 }
 
 // Scroll-based navigation with pixel threshold
+let isScrollingProgrammatically = false;
+
 function initScrollNavigation() {
   const sections = document.querySelectorAll(".home, .summary, .projects, .skills, .links");
   const pixelThreshold = 250; // 250px visible = activate
 
   function checkSectionVisibility() {
+    // Skip if we're in the middle of a programmatic scroll
+    if (isScrollingProgrammatically) return;
+
     const windowHeight = window.innerHeight;
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
@@ -139,6 +144,9 @@ function initScrollNavigation() {
 document.querySelectorAll(".menu-button-solo").forEach((btn) => {
   btn.addEventListener("click", function () {
     const targetId = this.getAttribute("data-target");
+
+    // Disable scroll-based navigation during programmatic scroll
+    isScrollingProgrammatically = true;
     setActiveMenuItem(targetId);
 
     if (targetId === "home") {
@@ -149,6 +157,11 @@ document.querySelectorAll(".menu-button-solo").forEach((btn) => {
         section.scrollIntoView({ behavior: "smooth" });
       }
     }
+
+    // Re-enable scroll-based navigation after smooth scroll completes
+    setTimeout(() => {
+      isScrollingProgrammatically = false;
+    }, 1000); // Adjust timeout based on your smooth scroll duration
   });
 });
 
@@ -156,6 +169,9 @@ document.querySelectorAll(".menu-button-solo").forEach((btn) => {
 document.querySelectorAll(".menu-mobile-btn").forEach((btn) => {
   btn.addEventListener("click", function () {
     const targetId = this.getAttribute("data-target");
+
+    // Disable scroll-based navigation during programmatic scroll
+    isScrollingProgrammatically = true;
     setActiveMenuItem(targetId);
 
     if (targetId === "home") {
@@ -166,5 +182,10 @@ document.querySelectorAll(".menu-mobile-btn").forEach((btn) => {
         section.scrollIntoView({ behavior: "smooth" });
       }
     }
+
+    // Re-enable scroll-based navigation after smooth scroll completes
+    setTimeout(() => {
+      isScrollingProgrammatically = false;
+    }, 1000); // Adjust timeout based on your smooth scroll duration
   });
 });
