@@ -533,6 +533,47 @@ body {
   width: 100%;
 }
 
+.project-card0 {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 16px;
+  border: none;
+  cursor: pointer;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(27, 27, 27, 0.9)),
+    url(res/employee-management.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.project-card0 .text {
+  width: 264px;
+
+}
+
+.project-card0 img {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+}
+
+
+.project-card0 h4 {
+  position: relative;
+  width: 100%;
+  font-size: 18px;
+}
+
+.project-card0 p {
+  position: relative;
+  width: 100%;
+
+}
+
+
 .project-card1 {
   position: relative;
   width: 300px;
