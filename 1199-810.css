@@ -3,11 +3,10 @@
 
 @media screen and (max-width: 1199px) and (min-width: 810px) {
 
-    body {
+    body::before {
         background-image: url(res/tablet.jpg);
         background-size: cover;
         background-position: center;
-        background-attachment: fixed;
     }
 
     .menu-mobile {

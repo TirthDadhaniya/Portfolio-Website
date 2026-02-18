@@ -2,11 +2,10 @@
 
 @media screen and (max-width: 809px) {
 
-    body {
+    body::before {
         background-image: url(res/phone.jpg);
         background-size: cover;
         background-position: center;
-        background-attachment: fixed;
     }
 
     .menu {
@@ -16,8 +15,10 @@
     .menu-mobile {
         position: fixed;
         bottom: 72px;
+        bottom: calc(72px + env(safe-area-inset-bottom, 0px));
         left: 50%;
-        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%) translateZ(0);
+        transform: translateX(-50%) translateZ(0);
         width: 312px;
         display: flex;
         flex-direction: row;
@@ -30,6 +31,7 @@
         cursor: pointer;
         z-index: 10;
         background-color: hsla(0, 0%, 100%, 0.1);
+        -webkit-backdrop-filter: blur(16px);
         backdrop-filter: blur(16px);
         border-radius: 999px;
     }
@@ -90,6 +92,8 @@
     .home {
         height: auto;
         min-height: 100vh;
+        min-height: 100dvh;
+        min-height: -webkit-fill-available;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -102,6 +106,7 @@
         position: static;
         top: auto;
         left: auto;
+        -webkit-transform: none;
         transform: none;
         width: 100%;
     }
@@ -110,9 +115,11 @@
         position: static;
         top: auto;
         left: auto;
+        -webkit-transform: none;
         transform: none;
         width: 100%;
         height: 90vh;
+        height: 90dvh;
         padding-bottom: 40px;
     }
 
@@ -127,6 +134,7 @@
         align-items: flex-start;
         flex-wrap: nowrap;
         gap: 20px;
+        -webkit-transform: none;
         transform: none;
     }
 
@@ -220,6 +228,15 @@
 
     .language-stack {
         width: 100%;
+    }
+
+    .language-stack-inside {
+        width: 100%;
+        gap: 16px;
+    }
+
+    .language-bar-track {
+        flex: 1;
     }
 
     .education {

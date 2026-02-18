@@ -1,20 +1,51 @@
 @import url("https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
+:root {
+  --color-primary: #FFB800;
+  --color-bg: #000000;
+  --color-text: #ffffff;
+  --color-green: #02FF27;
+  --color-overlay: rgba(0, 0, 0, 0.6);
+  --color-line: #999;
+  --font-family: "Albert Sans", sans-serif;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
-  font-family: "Albert Sans", sans-serif;
-  background-color: #000000;
-  color: #ffffff;
+  font-family: var(--font-family);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overscroll-behavior: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Fixed background using pseudo-element — iOS doesn't support background-attachment: fixed */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-image: url(res/desktop.jpg);
   background-size: cover;
   background-position: center;
-  /* max-height: 100vh; */
-  background-attachment: fixed;
+  z-index: -2;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
 }
 
 .background-blur-overlay {
@@ -23,25 +54,29 @@ body {
   left: 0;
   width: 100vw;
   height: 100vh;
+  height: 100dvh;
   z-index: -1;
   background-color: rgba(0, 0, 0, 0);
   pointer-events: none;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
 
-  backdrop-filter: blur(0px);
   -webkit-backdrop-filter: blur(0px);
-  transition: backdrop-filter 0.5s ease-out, -webkit-backdrop-filter 0.5s ease-out, background-color 0.5s ease-out;
+  backdrop-filter: blur(0px);
+  -webkit-transition: -webkit-backdrop-filter 0.5s ease-out, backdrop-filter 0.5s ease-out, background-color 0.5s ease-out;
+  transition: -webkit-backdrop-filter 0.5s ease-out, backdrop-filter 0.5s ease-out, background-color 0.5s ease-out;
 }
 
 .background-blur-overlay.active-background-blur {
+  -webkit-backdrop-filter: blur(40px);
   backdrop-filter: blur(40px);
-  -webkit-backdrop-filter: blur(10px);
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: var(--color-overlay);
 }
 
 .heading1 {
-  font-family: "Albert Sans";
+  font-family: var(--font-family);
   font-weight: 700;
-  color: #ffffff;
+  color: var(--color-text);
   text-transform: none;
   text-decoration: none;
   font-size: 64px;
@@ -51,9 +86,9 @@ body {
 }
 
 .heading2 {
-  font-family: "Albert Sans";
+  font-family: var(--font-family);
   font-weight: 700;
-  color: #ffb700;
+  color: var(--color-primary);
   text-transform: capitalize;
   text-decoration: none;
   font-size: 48px;
@@ -63,9 +98,9 @@ body {
 }
 
 .heading3 {
-  font-family: "Albert Sans";
+  font-family: var(--font-family);
   font-weight: 700;
-  color: #ffffff;
+  color: var(--color-text);
   text-transform: uppercase;
   text-decoration: none;
   font-size: 26px;
@@ -75,9 +110,9 @@ body {
 }
 
 .bodyL {
-  font-family: "Albert Sans";
+  font-family: var(--font-family);
   font-weight: 700;
-  color: #ffffff;
+  color: var(--color-text);
   text-transform: none;
   text-decoration: none;
   font-size: 18px;
@@ -86,9 +121,9 @@ body {
 }
 
 .body {
-  font-family: "Albert Sans";
+  font-family: var(--font-family);
   font-weight: 400;
-  color: #ffffff;
+  color: var(--color-text);
   text-transform: none;
   text-decoration: none;
   font-size: 16px;
@@ -97,9 +132,9 @@ body {
 }
 
 .bodyS {
-  font-family: "Albert Sans";
-  font-weight: regular;
-  color: #ffffff;
+  font-family: var(--font-family);
+  font-weight: 400;
+  color: var(--color-text);
   text-transform: none;
   text-decoration: none;
   font-size: 16px;
@@ -108,9 +143,9 @@ body {
 }
 
 .quote {
-  font-family: "Albert Sans";
+  font-family: var(--font-family);
   font-weight: 700;
-  color: #ffffff;
+  color: var(--color-text);
   text-transform: none;
   text-decoration: none;
   font-size: 32px;
@@ -136,6 +171,7 @@ body {
   position: relative;
   width: 100%;
   height: 100vh;
+  height: 100dvh;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -164,7 +200,7 @@ body {
   position: relative;
   height: 9px;
   width: 9px;
-  background-color: #02FF27;
+  background-color: var(--color-green);
   border-radius: 50%;
 }
 
@@ -185,7 +221,7 @@ body {
 }
 
 .name h3 {
-  color: #ffb800;
+  color: var(--color-primary);
   outline: none;
   flex-shrink: 0;
   word-break: break-word;
@@ -246,10 +282,12 @@ body {
   position: fixed;
   bottom: 48px;
   left: 50%;
+  -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
   width: 720px;
   border-radius: 999px;
   display: flex;
+  -webkit-box-pack: justify;
   justify-content: space-between;
   align-items: center;
   flex-wrap: nowrap;
@@ -259,7 +297,10 @@ body {
   cursor: pointer;
   z-index: 10;
   background-color: hsla(0, 0%, 100%, 0.1);
+  -webkit-backdrop-filter: blur(16px);
   backdrop-filter: blur(16px);
+  -webkit-transform: translateX(-50%) translateZ(0);
+  transform: translateX(-50%) translateZ(0);
 }
 
 .menu-button-solo {
@@ -292,8 +333,8 @@ body {
   background-color: transparent;
   border: none;
   border-radius: 999px;
-  font-family: "Albert Sans";
-  color: #ffffff;
+  font-family: var(--font-family);
+  color: var(--color-text);
   font-weight: 700;
   font-size: 16px;
   text-transform: none;
@@ -408,7 +449,7 @@ body {
   align-self: stretch;
   height: auto;
   overflow: hidden;
-  background-color: #FFB800;
+  background-color: var(--color-primary);
 }
 
 .projects {
@@ -487,7 +528,7 @@ body {
 }
 
 .circle {
-  background-color: #ffb800;
+  background-color: var(--color-primary);
   position: relative;
   width: 9px;
   height: 9px;
@@ -506,7 +547,7 @@ body {
   position: relative;
   width: 1px;
   flex: 1 1 0;
-  background-color: #999;
+  background-color: var(--color-line);
   opacity: 0.6;
   overflow: visible;
 }
@@ -780,12 +821,12 @@ body {
 
 .skills-text {
   position: relative;
-  width: 493px;
-  height: 124px;
+  width: 525px;
+  height: auto;
   display: grid;
   grid-template-columns: repeat(2, minmax(50px, 100%));
-  grid-template-rows: repeat(3, minmax(0, 100%));
-  gap: 0px;
+  grid-template-rows: repeat(4, minmax(0, 100%));
+  gap: 4px;
   padding: 0px;
   overflow: hidden;
 }
@@ -819,7 +860,7 @@ body {
   height: auto;
   display: grid;
   grid-template-columns: repeat(5, minmax(50px, 100%));
-  grid-template-rows: repeat(3, minmax(0, 100%));
+  grid-template-rows: auto;
   gap: 0px;
   padding: 0px;
   overflow: visible;
@@ -874,15 +915,6 @@ body {
   height: 75px;
 }
 
-#mongodb {
-  gap: 13px;
-}
-
-#mongodb-icon {
-  width: 65px;
-  height: 65px;
-}
-
 .skill-icon img {
   width: 100%;
   height: 100%;
@@ -892,7 +924,7 @@ body {
 .logo-label {
   font-size: 14px;
   font-weight: 700;
-  color: #ffffff;
+  color: var(--color-text);
 }
 
 .language {
@@ -909,7 +941,7 @@ body {
 }
 
 .language h3 {
-  color: #FFB800;
+  color: var(--color-primary);
 }
 
 .language-stack {
@@ -926,11 +958,13 @@ body {
 
 .language-stack-inside {
   position: relative;
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
   flex-wrap: nowrap;
+  gap: 16px;
   padding: 0px;
   overflow: hidden;
 }
@@ -938,6 +972,26 @@ body {
 .language-stack-inside h4 {
   position: relative;
   width: 87px;
+  flex-shrink: 0;
+}
+
+.language-bar-track {
+  position: relative;
+  flex: 1;
+  height: 6px;
+  width: 240px;
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.language-bar-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: var(--color-primary);
+  border-radius: 6px;
 }
 
 .education {
@@ -953,7 +1007,7 @@ body {
 }
 
 .education h3 {
-  color: #FFB800;
+  color: var(--color-primary);
 }
 
 .education-stack {
@@ -1013,7 +1067,7 @@ body {
 }
 
 .education-stack-inside2 p {
-  color: #FFB800;
+  color: var(--color-primary);
 }
 
 .certificate {
@@ -1029,7 +1083,7 @@ body {
 }
 
 .certificate h3 {
-  color: #FFB800;
+  color: var(--color-primary);
 }
 
 .certificate-stack {
@@ -1083,7 +1137,7 @@ body {
 }
 
 .certificate-stack-inside2 p {
-  color: #FFB800;
+  color: var(--color-primary);
 }
 
 
@@ -1091,6 +1145,7 @@ body {
   position: relative;
   width: 100%;
   min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
