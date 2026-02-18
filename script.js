@@ -1,31 +1,49 @@
 document.addEventListener("DOMContentLoaded", () => {
   const lightSummary = document.getElementById("light-summary");
-  const linksText = document.querySelector(".links-text");
   const backgroundBlurOverlay = document.querySelector(".background-blur-overlay");
 
-  if (!lightSummary || !linksText || !backgroundBlurOverlay) {
-    console.warn("One or more elements for blur effect not found. Ensure IDs/classes are correct.");
+  if (!lightSummary || !backgroundBlurOverlay) {
+    console.warn("Blur effect elements not found. Ensure IDs/classes are correct.");
     return;
   }
 
   const handleScrollBlur = () => {
     const lightSummaryRect = lightSummary.getBoundingClientRect();
-    const linksTextRect = linksText.getBoundingClientRect();
 
-    const activateBlur = lightSummaryRect.top <= window.innerHeight;
-
-    const deactivateBlur = linksTextRect.bottom <= 0;
-
-    if (activateBlur && !deactivateBlur) {
+    if (lightSummaryRect.top <= window.innerHeight) {
       backgroundBlurOverlay.classList.add("active-background-blur");
     } else {
       backgroundBlurOverlay.classList.remove("active-background-blur");
     }
   };
 
-  window.addEventListener("scroll", handleScrollBlur);
+  window.addEventListener("scroll", handleScrollBlur, { passive: true });
 
   handleScrollBlur();
+
+  // Fix iOS dynamic viewport height (accounts for Safari toolbar)
+  function setVhProperty() {
+    const vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty("--vh", vh + "px");
+  }
+  setVhProperty();
+  window.addEventListener("resize", setVhProperty);
+  if (window.visualViewport) {
+    window.visualViewport.addEventListener("resize", setVhProperty);
+  }
+
+  // Dynamic footer year
+  const footerYear = document.getElementById("footer-year");
+  if (footerYear) {
+    footerYear.textContent = new Date().getFullYear();
+  }
+
+  // Register service worker for offline caching
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+      navigator.serviceWorker.register("/sw.js").catch(() => {});
+    });
+  }
 });
 
 // Set default active button (Home) and scroll to top when page loads
@@ -134,16 +152,29 @@ function initScrollNavigation() {
     }
   }
 
-  window.addEventListener("scroll", onScroll);
+  window.addEventListener("scroll", onScroll, { passive: true });
 
   // Initial check
   checkSectionVisibility();
 }
 
+// iOS-safe smooth scroll helper
+function smoothScrollTo(element) {
+  if (element) {
+    try {
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
+    } catch (e) {
+      // Fallback for older iOS Safari versions
+      var top = element.getBoundingClientRect().top + window.pageYOffset;
+      window.scrollTo(0, top);
+    }
+  }
+}
+
 // Click event listener for manual navigation - Desktop buttons
 document.querySelectorAll(".menu-button-solo").forEach((btn) => {
-  btn.addEventListener("click", function () {
-    const targetId = this.getAttribute("data-target");
+  function handleNav() {
+    const targetId = btn.getAttribute("data-target");
 
     // Disable scroll-based navigation during programmatic scroll
     isScrollingProgrammatically = true;
@@ -153,22 +184,30 @@ document.querySelectorAll(".menu-button-solo").forEach((btn) => {
       window.scrollTo({ top: 0, behavior: "smooth" });
     } else {
       const section = document.querySelector(`.${targetId}`);
-      if (section) {
-        section.scrollIntoView({ behavior: "smooth" });
-      }
+      smoothScrollTo(section);
     }
 
     // Re-enable scroll-based navigation after smooth scroll completes
     setTimeout(() => {
       isScrollingProgrammatically = false;
-    }, 1500); // Extended to cover full smooth scroll including deceleration phase
+    }, 1500);
+  }
+
+  btn.addEventListener("click", handleNav);
+
+  // Keyboard accessibility: Enter and Space trigger navigation
+  btn.addEventListener("keydown", function (e) {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      handleNav();
+    }
   });
 });
 
 // Click event listener for manual navigation - Mobile buttons
 document.querySelectorAll(".menu-mobile-btn").forEach((btn) => {
-  btn.addEventListener("click", function () {
-    const targetId = this.getAttribute("data-target");
+  function handleNav() {
+    const targetId = btn.getAttribute("data-target");
 
     // Disable scroll-based navigation during programmatic scroll
     isScrollingProgrammatically = true;
@@ -178,14 +217,22 @@ document.querySelectorAll(".menu-mobile-btn").forEach((btn) => {
       window.scrollTo({ top: 0, behavior: "smooth" });
     } else {
       const section = document.querySelector(`.${targetId}`);
-      if (section) {
-        section.scrollIntoView({ behavior: "smooth" });
-      }
+      smoothScrollTo(section);
     }
 
     // Re-enable scroll-based navigation after smooth scroll completes
     setTimeout(() => {
       isScrollingProgrammatically = false;
-    }, 1500); // Extended to cover full smooth scroll including deceleration phase
+    }, 1500);
+  }
+
+  btn.addEventListener("click", handleNav);
+
+  // Keyboard accessibility: Enter and Space trigger navigation
+  btn.addEventListener("keydown", function (e) {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      handleNav();
+    }
   });
 });
