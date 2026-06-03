@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
 :root {
-  --color-primary: #FFB800;
+  --color-primary: #ffb800;
   --color-bg: #000000;
   --color-text: #ffffff;
-  --color-green: #02FF27;
+  --color-green: #02ff27;
   --color-overlay: rgba(0, 0, 0, 0.6);
   --color-line: #999;
   --font-family: "Albert Sans", sans-serif;
@@ -34,7 +34,7 @@ body {
 
 /* Fixed background using pseudo-element — iOS doesn't support background-attachment: fixed */
 body::before {
-  content: '';
+  content: "";
   position: fixed;
   top: 0;
   left: 0;
@@ -63,8 +63,14 @@ body::before {
 
   -webkit-backdrop-filter: blur(0px);
   backdrop-filter: blur(0px);
-  -webkit-transition: -webkit-backdrop-filter 0.5s ease-out, backdrop-filter 0.5s ease-out, background-color 0.5s ease-out;
-  transition: -webkit-backdrop-filter 0.5s ease-out, backdrop-filter 0.5s ease-out, background-color 0.5s ease-out;
+  -webkit-transition:
+    -webkit-backdrop-filter 0.5s ease-out,
+    backdrop-filter 0.5s ease-out,
+    background-color 0.5s ease-out;
+  transition:
+    -webkit-backdrop-filter 0.5s ease-out,
+    backdrop-filter 0.5s ease-out,
+    background-color 0.5s ease-out;
 }
 
 .background-blur-overlay.active-background-blur {
@@ -328,7 +334,6 @@ body::before {
   height: 20px;
 }
 
-
 .menu-btn {
   background-color: transparent;
   border: none;
@@ -574,6 +579,41 @@ body::before {
   width: 100%;
 }
 
+.project-card5 {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 16px;
+  border: none;
+  cursor: pointer;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(27, 27, 27, 0.9)), url(res/dashboard.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.project-card5 .text {
+  width: 264px;
+}
+
+.project-card5 img {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+}
+
+.project-card5 h4 {
+  position: relative;
+  width: 100%;
+  font-size: 18px;
+}
+
+.project-card5 p {
+  position: relative;
+  width: 100%;
+}
+
 .project-card0 {
   position: relative;
   width: 300px;
@@ -582,9 +622,7 @@ body::before {
   border-radius: 16px;
   border: none;
   cursor: pointer;
-  background-image:
-    linear-gradient(rgba(0, 0, 0, 0.4), rgba(27, 27, 27, 0.9)),
-    url(res/employee-management.png);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(27, 27, 27, 0.9)), url(res/employee-management.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -592,7 +630,6 @@ body::before {
 
 .project-card0 .text {
   width: 264px;
-
 }
 
 .project-card0 img {
@@ -600,7 +637,6 @@ body::before {
   top: 12px;
   right: 12px;
 }
-
 
 .project-card0 h4 {
   position: relative;
@@ -611,9 +647,7 @@ body::before {
 .project-card0 p {
   position: relative;
   width: 100%;
-
 }
-
 
 .project-card1 {
   position: relative;
@@ -623,9 +657,7 @@ body::before {
   border-radius: 16px;
   border: none;
   cursor: pointer;
-  background-image:
-    linear-gradient(rgba(0, 0, 0, 0.4), rgba(27, 27, 27, 0.9)),
-    url(res/netflix.png);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(27, 27, 27, 0.9)), url(res/netflix.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -637,7 +669,6 @@ body::before {
   right: 12px;
 }
 
-
 .project-card1 h4 {
   position: relative;
   width: 100%;
@@ -646,7 +677,6 @@ body::before {
 .project-card1 p {
   position: relative;
   width: 100%;
-
 }
 
 .project-card2 {
@@ -657,9 +687,7 @@ body::before {
   border-radius: 16px;
   border: none;
   cursor: pointer;
-  background-image:
-    linear-gradient(rgba(0, 0, 0, 0.4), rgba(27, 27, 27, 0.9)),
-    url(res/SaaS.png);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(27, 27, 27, 0.9)), url(res/SaaS.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -671,7 +699,6 @@ body::before {
   right: 12px;
 }
 
-
 .project-card2 h4 {
   position: relative;
   width: 100%;
@@ -680,7 +707,6 @@ body::before {
 .project-card2 p {
   position: relative;
   width: 100%;
-
 }
 
 .project-card3 {
@@ -691,9 +717,7 @@ body::before {
   border-radius: 16px;
   border: none;
   cursor: pointer;
-  background-image:
-    linear-gradient(rgba(0, 0, 0, 0.4), rgba(27, 27, 27, 0.9)),
-    url(res/to-do.png);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(27, 27, 27, 0.9)), url(res/to-do.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -705,7 +729,6 @@ body::before {
   right: 12px;
 }
 
-
 .project-card3 h4 {
   position: relative;
   width: 100%;
@@ -714,7 +737,6 @@ body::before {
 .project-card3 p {
   position: relative;
   width: 100%;
-
 }
 
 .project-card {
@@ -758,7 +780,6 @@ body::before {
 .project-card p {
   position: relative;
   width: 100%;
-
 }
 
 .desc {
@@ -771,8 +792,7 @@ body::before {
 }
 
 .desc h4 {
-  color: #FFB800;
-
+  color: #ffb800;
 }
 
 .desc a {
@@ -850,8 +870,7 @@ body::before {
   height: 9px;
   width: 9px;
   border-radius: 50%;
-  background-color: #FFB800;
-
+  background-color: #ffb800;
 }
 
 .skills-logo {
@@ -1139,7 +1158,6 @@ body::before {
 .certificate-stack-inside2 p {
   color: var(--color-primary);
 }
-
 
 .links {
   position: relative;

@@ -6,23 +6,23 @@
     <meta name="google-site-verification" content="G2vrLyEnzAc4GO9zSunS5zfYeqLt2z2O-Nv3omz--6I" />
 
     <!-- SEO Meta Tags -->
-    <title>Tirth Dadhaniya | Portfolio</title>
+    <title>Tirth Dadhaniya — Backend Developer | Node.js · MERN Stack</title>
     <meta
       name="description"
-      content="MERN Stack & Java Developer | Full-Stack Web Developer specializing in React, Node.js, Express.js, MongoDB, and Java. Explore my projects, skills, and experience in modern web development."
+      content="Backend Developer specializing in Node.js, Express, and MongoDB. Building production REST APIs, Docker-deployed apps, and self-hosted cloud infrastructure."
     />
     <meta
       name="keywords"
-      content="Tirth Dadhaniya, Web Developer, Full Stack Developer, BTech Student, Java, Java Developer, JavaScript, React, Node.js, Express.js, MongoDB, MERN Stack, Docker, HTML, CSS, Figma, Framer, N8N Automation, N8N, Portfolio"
+      content="Tirth Dadhaniya, Backend Developer, Node.js Developer, MERN Stack Developer, REST API, Express.js, MongoDB, Docker, Linux, VPS, Full Stack Developer, JavaScript, React, Git, GitHub, Portfolio"
     />
     <meta name="author" content="Tirth Dadhaniya" />
     <meta name="theme-color" content="#000000" />
 
     <!-- Open Graph Meta Tags (for social media sharing) -->
-    <meta property="og:title" content="Tirth Dadhaniya - Web Developer | Portfolio" />
+    <meta property="og:title" content="Tirth Dadhaniya — Backend Developer | Node.js · MERN Stack" />
     <meta
       property="og:description"
-      content="MERN Stack & Java Developer | Full-Stack Web Developer specializing in React, Node.js, Express.js, MongoDB, and Java."
+      content="Backend Developer specializing in Node.js, Express, and MongoDB. Building production REST APIs, Docker-deployed apps, and self-hosted cloud infrastructure."
     />
     <meta property="og:image" content="https://tirthdadhaniya.me/res/profile-pic.png" />
     <meta property="og:url" content="https://tirthdadhaniya.me" />
@@ -31,10 +31,10 @@
 
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Tirth Dadhaniya - Web Developer | Portfolio" />
+    <meta name="twitter:title" content="Tirth Dadhaniya — Backend Developer | Node.js · MERN Stack" />
     <meta
       name="twitter:description"
-      content="MERN Stack & Java Developer | Full-Stack Web Developer specializing in React, Node.js, Express.js, MongoDB, and Java."
+      content="Backend Developer specializing in Node.js, Express, and MongoDB. Building production REST APIs, Docker-deployed apps, and self-hosted cloud infrastructure."
     />
     <meta name="twitter:image" content="https://tirthdadhaniya.me/res/profile-pic.png" />
 
@@ -184,7 +184,7 @@
           <h4 class="bodyL">Open to Work</h4>
         </div>
         <div class="name">
-          <h3 class="heading3">MERN Stack - Java</h3>
+          <h3 class="heading3">Backend Developer · MERN Stack</h3>
           <h1 class="heading1">Tirth Dadhaniya</h1>
         </div>
         <div class="links-home">
@@ -224,19 +224,18 @@
           <h2 class="heading2">Summary</h2>
           <div id="light-summary">
             <p class="body">
-              I am an Information Technology student at GTU and currently a Web Developer Intern at AppBits
-              Technologies. My core expertise is in Full-Stack Development, working with Node.js, Express, and MongoDB
-              on the backend while actively learning while building modern frontends with React. I enjoy creating
-              functional, well-structured applications that solve real-world problems.
+              I'm a BE IT graduate from GTU (2026) with a backend-first approach to web development. My core stack is
+              Node.js, Express, and MongoDB — I care about clean API design, proper validation, auth security, and
+              service-layer architecture. Beyond the backend, I build full-stack apps with React on the frontend,
+              shipping complete products end-to-end.
             </p>
           </div>
           <div class="dark-summary">
             <div class="dark-summary-line"></div>
             <p class="quote">
-              "Beyond writing code, I am passionate about Cloud Infrastructure and DevOps, which I practice by managing
-              my own Oracle Cloud VPS. I use Docker, Portainer, and Nginx Proxy Manager to deploy and host my projects.
-              Beyond development, I enjoy exploring Linux, specifically through my Arch Linux dual-boot setup, which
-              helps me stay familiar with system-level environments and command-line workflows.
+              "Beyond writing code, I manage my own Oracle Cloud VPS running 4+ live applications in production — all
+              containerized with Docker, managed via Portainer, and reverse-proxied through Nginx Proxy Manager. I run
+              Arch Linux daily, which keeps me close to system-level environments and CLI workflows."
             </p>
           </div>
         </div>
@@ -246,6 +245,141 @@
         <div class="projects-ct">
           <h2 class="heading2">Projects</h2>
           <div class="project-stack">
+            <!-- SmartInvest -->
+            <div class="project-stack-inside">
+              <div class="inside1">
+                <div class="inside1-gap1"></div>
+                <div class="circle"></div>
+                <div class="inside1-gap2"></div>
+                <div class="line"></div>
+              </div>
+              <div class="inside2">
+                <h3 class="heading3">SMARTINVEST — MUTUAL FUND PORTFOLIO MANAGER</h3>
+                <div class="overview">
+                  <p class="body">
+                    A production-deployed fintech web app that goes beyond standard mutual fund trackers. Built with the
+                    MERN stack, it features a secure backend API layer, financial calculation engine, and analytics
+                    tools designed for real investment decision-making.
+                  </p>
+                </div>
+                <a href="https://smartinvest.tirthdadhaniya.me/" target="_blank">
+                  <div class="project-card5">
+                    <img src="res/arrow.svg" />
+                    <div class="text">
+                      <h4 class="bodyL">SmartInvest</h4>
+                      <p class="bodyS">MutualFund Portfolio Manager</p>
+                    </div>
+                  </div></a
+                >
+                <div class="desc">
+                  <div>
+                    <h4 class="bodyL">Objective:</h4>
+                    <p class="body">
+                      - To build a self-hosted, production-grade portfolio manager with advanced financial analytics and
+                      a secure, scalable REST API backend.
+                    </p>
+                  </div>
+                  <div>
+                    <h4 class="bodyL">Key Features:</h4>
+                    <p class="body">
+                      - <b>JWT Authentication:</b> HTTP-only cookie-based JWT auth with express-rate-limit brute-force
+                      protection.<br />
+                      - <b>Investment Tracking:</b> FIFO-based sell logic, immutable investment lots, and SIP scheduling
+                      with drift prevention for financial accuracy.<br />
+                      - <b>Advanced Analytics:</b> Post-tax LTCG calculator, break-even NAV, What-If backtesting
+                      simulator, goal-gap analysis, and portfolio stress test under crash scenarios.<br />
+                      - <b>API Layer:</b> 30+ REST endpoints with centralized Zod validation, custom logging middleware,
+                      and service-layer architecture.<br />
+                      - <b>Performance:</b> Mongoose .lean() queries for optimized read operations with full JSDoc
+                      documentation across the codebase.
+                    </p>
+                  </div>
+                  <div>
+                    <h4 class="bodyL">Tech Stack:</h4>
+
+                    <p class="body">
+                      - <b>Frontend:</b> React, Tailwind CSS, JavaScript (ES6+).<br />- <b>Backend:</b> Node.js,
+                      Express.js.<br />- <b>Database:</b> MongoDB (Mongoose ODM).<br />- <b>Security:</b> JWT, Zod,
+                      express-rate-limit, dotenv.
+                    </p>
+                  </div>
+                  <div>
+                    <h4 class="bodyL">Skills Used:</h4>
+                    <p class="body">
+                      - REST API Design, JWT Authentication, Input Validation, Service-Layer Architecture, FIFO Logic,
+                      Financial Calculations, Docker Deployment.
+                    </p>
+                  </div>
+                  <div>
+                    <h4 class="bodyL">Github:</h4>
+                    <a href="https://github.com/TirthDadhaniya/smartinvest" target="_blank">- Repository link</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Personal Cloud -->
+            <div class="project-stack-inside">
+              <div class="inside1">
+                <div class="inside1-gap1"></div>
+                <div class="circle"></div>
+                <div class="inside1-gap2"></div>
+                <div class="line"></div>
+              </div>
+              <div class="inside2">
+                <h3 class="heading3">PERSONAL CLOUD INFRASTRUCTURE & AUTOMATION</h3>
+                <div class="overview">
+                  <p class="body">
+                    A self-hosted personal cloud running 4+ production applications on Oracle Cloud Free Tier. Built
+                    around a Docker-based deployment stack with full automation workflows, media ingestion pipelines,
+                    and Telegram bot integrations — all managed from a single VPS.
+                  </p>
+                </div>
+                <div class="desc">
+                  <div>
+                    <h4 class="bodyL">Objective:</h4>
+                    <p class="body">
+                      - To design and operate a production-grade self-hosted cloud environment with automated workflows,
+                      eliminating manual intervention across media management and monitoring tasks.
+                    </p>
+                  </div>
+                  <div>
+                    <h4 class="bodyL">Key Features:</h4>
+                    <p class="body">
+                      - <b>Container Orchestration:</b> All applications containerized via Docker, managed through
+                      Portainer, and reverse-proxied with SSL via Nginx Proxy Manager.<br />
+                      - <b>Custom Bookmark Manager:</b> A React/Node.js/MongoDB bookmark app deployed as a standalone
+                      Docker container on a live subdomain.<br />
+                      - <b>Automated Media Pipeline:</b> Telegram bot accepts any media URL, passes it to a VPS-side
+                      download script, moves files to rclone-mounted Google Drive, notifies via Telegram, and triggers
+                      Jellyfin library scan — fully automated end-to-end.<br />
+                      - <b>n8n Automation Workflows:</b> Telegram-controlled Movie/Series watchlist with HTML scraping
+                      and episode tracking, plus a scheduled scanner that detects new episode availability and pushes
+                      instant alerts with download links.
+                    </p>
+                  </div>
+                  <div>
+                    <h4 class="bodyL">Tech Stack:</h4>
+
+                    <p class="body">
+                      - <b>Infrastructure:</b> Oracle Cloud Free Tier (ARM, 4-core, 24GB RAM), Docker, Portainer, Nginx
+                      Proxy Manager.<br />
+                      - <b>Automation:</b> n8n (self-hosted), Bash scripting, rclone.<br />
+                      - <b>Code Stack</b> Node.js, Express.js, MongoDB, React.<br />
+                      - <b>OS:</b> Ubuntu 22.04 (Server), Arch Linux (Dev).
+                    </p>
+                  </div>
+                  <div>
+                    <h4 class="bodyL">Skills Used:</h4>
+                    <p class="body">
+                      - Docker, Container Orchestration, Linux Administration, Reverse Proxy, SSL Configuration,
+                      Workflow Automation, Bash Scripting, API Integration.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             <!-- Employee Management System -->
             <div class="project-stack-inside">
               <div class="inside1">
@@ -295,9 +429,9 @@
                     <h4 class="bodyL">Tech Stack:</h4>
 
                     <p class="body">
-                      - <b>Frontend:</b> HTML5, CSS3, JavaScript (ES6+), jQuery, DataTables.<br />-
-                      <b>Backend:</b> Node.js, Express.js.<br />- <b>Database:</b> MongoDB (Mongoose ODM).<br />-
-                      <b>Security:</b> bcryptjs, dotenv.
+                      - <b>Frontend:</b> HTML5, CSS3, JavaScript (ES6+), DataTables.<br />- <b>Backend:</b> Node.js,
+                      Express.js.<br />- <b>Database:</b> MongoDB (Mongoose ODM).<br />- <b>Security:</b> bcryptjs,
+                      dotenv.
                     </p>
                   </div>
                   <div>
@@ -396,7 +530,7 @@
             </div>
 
             <!-- Netflix -->
-            <div class="project-stack-inside">
+            <!-- <div class="project-stack-inside">
               <div class="inside1">
                 <div class="inside1-gap1"></div>
                 <div class="circle"></div>
@@ -455,10 +589,10 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div> -->
 
             <!-- To-DO List Web App -->
-            <div class="project-stack-inside">
+            <!-- <div class="project-stack-inside">
               <div class="inside1">
                 <div class="inside1-gap1"></div>
                 <div class="circle"></div>
@@ -515,7 +649,7 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div> -->
 
             <!-- Readmall -->
             <!-- <div class="project-stack-inside">
@@ -639,7 +773,7 @@
               </div>
               <div class="skills-text-div">
                 <div class="skills-yello-circle"></div>
-                <h4 class="bodyL">Cloud & DevOps (Beginner)</h4>
+                <h4 class="bodyL">Cloud & DevOps</h4>
               </div>
               <div class="skills-text-div">
                 <div class="skills-yello-circle"></div>
@@ -647,19 +781,11 @@
               </div>
               <div class="skills-text-div">
                 <div class="skills-yello-circle"></div>
-                <h4 class="bodyL">UI/UX Design (Beginner)</h4>
+                <h4 class="bodyL">UI/UX Design</h4>
               </div>
             </div>
 
             <div class="skills-logo">
-              <div class="skills-logo-stack">
-                <div class="logo-stack-inside">
-                  <div class="skill-icon">
-                    <img src="res/react.svg" alt="React logo" loading="lazy" />
-                  </div>
-                  <h6 class="logo-label">React</h6>
-                </div>
-              </div>
               <div class="skills-logo-stack">
                 <div class="logo-stack-inside">
                   <div class="skill-icon">
@@ -690,6 +816,22 @@
                     <img src="res/javascript.svg" alt="JavaScript logo" loading="lazy" />
                   </div>
                   <h6 class="logo-label">JavaScript</h6>
+                </div>
+              </div>
+              <div class="skills-logo-stack">
+                <div class="logo-stack-inside">
+                  <div class="skill-icon">
+                    <img src="res/react.svg" alt="React logo" loading="lazy" />
+                  </div>
+                  <h6 class="logo-label">React</h6>
+                </div>
+              </div>
+              <div class="skills-logo-stack">
+                <div class="logo-stack-inside">
+                  <div class="skill-icon">
+                    <img src="res/tailwind.svg" alt="Tailwind CSS logo" loading="lazy" />
+                  </div>
+                  <h6 class="logo-label">Tailwind CSS</h6>
                 </div>
               </div>
               <div class="skills-logo-stack">
@@ -791,14 +933,6 @@
               <div class="skills-logo-stack">
                 <div class="logo-stack-inside">
                   <div class="skill-icon">
-                    <img src="res/intellij-idea.svg" alt="IntelliJ IDEA logo" loading="lazy" />
-                  </div>
-                  <h6 class="logo-label">IntelliJ IDEA</h6>
-                </div>
-              </div>
-              <div class="skills-logo-stack">
-                <div class="logo-stack-inside">
-                  <div class="skill-icon">
                     <img src="res/n8n.svg" alt="n8n logo" loading="lazy" />
                   </div>
                   <h6 class="logo-label">n8n</h6>
@@ -848,6 +982,7 @@
                   <div class="education-stack-inside2">
                     <h4 class="bodyL">Gujarat Technological University (GTU)</h4>
                     <p class="body">Bachelor of Engineering: Information Technology (2022 - 2026)</p>
+                    <p class="body">CGPA: 7.89</p>
                   </div>
                 </div>
                 <div class="education-stack-solo">
@@ -867,6 +1002,17 @@
             <div class="certificate">
               <h3 class="heading3">EXPERIENCE & CERTIFICATES</h3>
               <div class="certificate-stack">
+                <!-- AppBits -->
+                <div class="certificate-stack-solo">
+                  <div class="certificate-stack-inside1">
+                    <div class="upper-gap"></div>
+                    <div class="skills-yello-circle"></div>
+                  </div>
+                  <div class="certificate-stack-inside2">
+                    <h4 class="bodyL">Web Developer Intern — AppBits Technologies Pvt. Ltd.</h4>
+                    <p class="body">- Jan 2026 – Apr 2026</p>
+                  </div>
+                </div>
                 <!-- Elevate Labs -->
                 <div class="certificate-stack-solo">
                   <div class="certificate-stack-inside1">
@@ -923,7 +1069,7 @@
                   </div>
                 </div> -->
                 <!-- Internship & Job Preparation -->
-                <div class="certificate-stack-solo">
+                <!-- <div class="certificate-stack-solo">
                   <div class="certificate-stack-inside1">
                     <div class="upper-gap"></div>
                     <div class="skills-yello-circle"></div>
@@ -932,7 +1078,7 @@
                     <h4 class="bodyL">Internship & Job Preparation</h4>
                     <p class="body">- Internshala Trainings (Marks: 85%)</p>
                   </div>
-                </div>
+                </div> -->
                 <!-- Communication Skills -->
                 <div class="certificate-stack-solo">
                   <div class="certificate-stack-inside1">
@@ -981,7 +1127,7 @@
           </div>
         </div>
         <div class="footer">
-          <p>© <span id="footer-year">2025</span> Tirth Dadhaniya. All rights reserved.</p>
+          <p>© <span id="footer-year">2026</span> Tirth Dadhaniya. All rights reserved.</p>
         </div>
       </div>
     </div>
