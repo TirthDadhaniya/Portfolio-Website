@@ -1,14 +1,11 @@
 version: "3.8"
 services:
   portfolio:
-    image: nginx:stable-alpine
+    build: .
     container_name: portfolio
     restart: always
     ports:
       - "8080:80"
-    volumes:
-      # Use a relative path (./) to mount the Git repository's current directory
-      - ./:/usr/share/nginx/html:ro
     networks:
       - npm-network
 networks:
