@@ -7,7 +7,8 @@ services:
     ports:
       - "8080:80"
     volumes:
-      - /home/ubuntu/docker-projects/tirthdadhaniya.me:/usr/share/nginx/html:ro
+      # Use a relative path (./) to mount the Git repository's current directory
+      - ./:/usr/share/nginx/html:ro
     networks:
       - npm-network
 networks:
